@@ -16,8 +16,9 @@ namespace FinalProject_GameDataStruct.Class
     {
         Texture2D PlayerImage;
         Vector2 PlayerPosition;
-        int speed;
+        private int speed;
         double radius;
+
 
         public Player(Texture2D playerImage, Vector2 startingPosition)
         {
