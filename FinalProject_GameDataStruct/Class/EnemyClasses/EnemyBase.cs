@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace FinalProject_GameDataStruct.Class.EnemyClasses
 {
-    internal class Enemy
+    internal class EnemyBase
     {
         Texture2D EnemyImage;
         Vector2 EnemyPosition;
         protected int speed;
         protected int health;
 
-        public Enemy(Texture2D enemyImage, Vector2 enemyPosition)
+        public EnemyBase(Texture2D enemyImage, Vector2 enemyPosition)
         {
             EnemyImage = enemyImage;
             EnemyPosition = enemyPosition;

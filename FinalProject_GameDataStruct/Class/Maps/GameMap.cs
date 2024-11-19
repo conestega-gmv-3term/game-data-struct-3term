@@ -17,13 +17,13 @@ namespace FinalProject_GameDataStruct.Class.Maps
     {
         Texture2D BackGroundSprite;
         Vector2 MapPosition;
-        List<Enemy> MapEnemies;
+        List<EnemyBase> MapEnemies;
 
         public GameMap(Texture2D backGroundSprite, Vector2 mapPosition) 
         { 
             BackGroundSprite = backGroundSprite;
             MapPosition = mapPosition;
-            MapEnemies = new List<Enemy>();
+            MapEnemies = new List<EnemyBase>();
         }
 
         public void DrawMap() { }
