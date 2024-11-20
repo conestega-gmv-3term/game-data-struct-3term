@@ -10,7 +10,7 @@ namespace FinalProject_GameDataStruct.Class.Maps
 {
     internal class Map01 : GameMap
     {
-        public Map01(Texture2D backGroundSprite, Vector2 mapPosition) : base(backGroundSprite, mapPosition)
+        public Map01(Texture2D backGroundSprite) : base(backGroundSprite)
         {
         }
     }
