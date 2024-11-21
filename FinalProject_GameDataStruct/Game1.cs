@@ -1,4 +1,5 @@
-﻿using FinalProject_GameDataStruct.Class.Maps;
+﻿using FinalProject_GameDataStruct.Class;
+using FinalProject_GameDataStruct.Class.Maps;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -12,9 +13,14 @@ namespace FinalProject_GameDataStruct
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
+        //Map Related
         Dictionary<string ,GameMap> _maps;
         GameMap _currentMap;
         Texture2D _mapTexture;
+
+        //Player Related
+        Texture2D _playerTexture;
+        Player _player;
 
         //Screen variables
         int screenWidth = 1088;
@@ -45,6 +51,7 @@ namespace FinalProject_GameDataStruct
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            //Map Related
             _mapTexture = Content.Load<Texture2D>("Tilemap_Tiles");
 
             _maps.Add("map01", new GameMap(
@@ -56,6 +63,11 @@ namespace FinalProject_GameDataStruct
 
             _currentMap = _maps["map01"];
 
+            //Player Related
+            _playerTexture = Content.Load<Texture2D>("Character_Chart");
+
+            _player = new Player(_playerTexture, new Vector2 (128,192));
+
         }
 
         protected override void Update(GameTime gameTime)
@@ -64,6 +76,8 @@ namespace FinalProject_GameDataStruct
                 Exit();
 
             // TODO: Add your update logic here
+
+            _player.UpdatePlayerLocation(Keyboard.GetState(), gameTime);
 
             base.Update(gameTime);
         }
@@ -75,6 +89,12 @@ namespace FinalProject_GameDataStruct
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
 
             _currentMap.DrawCompleteMap(_spriteBatch);
+
+
+            _player.DrawPlayer(_spriteBatch);
+                
+
+            
 
             _spriteBatch.End();
 
