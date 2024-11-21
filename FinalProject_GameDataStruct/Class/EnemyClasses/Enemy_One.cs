@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace FinalProject_GameDataStruct.Class.EnemyClasses.Enemy
 {
-    internal class BasicEnemy : Enemy
+    internal class Enemy_One : EnemyBase
     {
-        public BasicEnemy(Texture2D enemyImage, Vector2 enemyPosition) : base(enemyImage, enemyPosition)
+        public Enemy_One(Texture2D enemyImage, Vector2 enemyPosition) : base(enemyImage, enemyPosition)
         {
             this.speed = 2;
         }
