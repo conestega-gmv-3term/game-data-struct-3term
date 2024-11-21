@@ -12,15 +12,9 @@ namespace FinalProject_GameDataStruct
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        GameMap _map;
-
-        Texture2D mapTexture;
-
-        private Dictionary<Vector2, int> floorMap;
-        private Dictionary<Vector2, int> topMap;
-        private Dictionary<Vector2, int> collisionsMap;
-        private Texture2D textureAtlas;
-        private Texture2D hitboxTexture;
+        Dictionary<string ,GameMap> _maps;
+        GameMap _currentMap;
+        Texture2D _mapTexture;
 
         //Screen variables
         int screenWidth = 1088;
@@ -36,9 +30,8 @@ namespace FinalProject_GameDataStruct
             _graphics.PreferredBackBufferHeight = screenHeight;
             _graphics.ApplyChanges();
 
-            floorMap = LoadMap("../../../Data/Map01_Floor_Layer.csv");
-            topMap = LoadMap("../../../Data/Map01_Top_Layer.csv");
-            collisionsMap = LoadMap("../../../Data/Map01_Collision.csv");
+            _maps = new Dictionary<string, GameMap>();
+            
         }
 
         protected override void Initialize()
@@ -52,10 +45,17 @@ namespace FinalProject_GameDataStruct
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            textureAtlas = Content.Load<Texture2D>("Tilemap_Tiles");
-            hitboxTexture = Content.Load<Texture2D>("Tilemap_Collision");
+            _mapTexture = Content.Load<Texture2D>("Tilemap_Tiles");
 
-            // TODO: use this.Content to load your game content here
+            _maps.Add("map01", new GameMap(
+                "../../../Data/Map01_Floor_Layer.csv",
+                "../../../Data/Map01_Top_Layer.csv",
+                "../../../Data/Map01_Collision.csv",
+                _mapTexture
+            ));
+
+            _currentMap = _maps["map01"];
+
         }
 
         protected override void Update(GameTime gameTime)
@@ -74,77 +74,12 @@ namespace FinalProject_GameDataStruct
 
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
 
-            
-
-            DrawTileMap(floorMap, textureAtlas);
-            //DrawTileMap(collisionsMap, hitboxTexture);
-            DrawTileMap(topMap, textureAtlas);
+            _currentMap.DrawCompleteMap(_spriteBatch);
 
             _spriteBatch.End();
 
             base.Draw(gameTime);
         }
 
-
-
-
-        private Dictionary<Vector2, int> LoadMap(string filepath)
-        {
-            Dictionary<Vector2, int> result = new();
-
-            StreamReader reader = new(filepath);
-
-            string line;
-            int y = 0;
-
-            while ((line = reader.ReadLine()) != null)
-            {
-                string[] items = line.Split(',');
-
-                for (int x = 0; x < items.Length; x++)
-                {
-                    if (int.TryParse(items[x], out int value))
-                    {
-                        result[new Vector2(x, y)] = value;
-                    }
-                }
-
-                y++;
-            }
-
-            return result;
-        }
-
-        private void DrawTileMap(Dictionary<Vector2, int> mapToDraw , Texture2D mapTexture)
-        {
-            int display_tilesize = 64;
-            int num_tiles_per_row = 8;
-            int pixel_tilesize = 8;
-
-            foreach (var item in mapToDraw)
-            {
-                if(item.Value > -1)
-                {
-                    Rectangle destRect = new(
-                (int)item.Key.X * display_tilesize,
-                (int)item.Key.Y * display_tilesize,
-                    display_tilesize,
-                    display_tilesize);
-
-                    int x = item.Value % num_tiles_per_row;
-                    int y = item.Value / num_tiles_per_row;
-
-                    Rectangle src = new(
-                        x * pixel_tilesize,
-                        y * pixel_tilesize,
-                        pixel_tilesize,
-                        pixel_tilesize
-                        );
-
-                    _spriteBatch.Draw(mapTexture, destRect, src, Color.White);
-                }
-                
-            }
-        }
     }
 }
