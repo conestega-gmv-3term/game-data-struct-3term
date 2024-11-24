@@ -12,30 +12,228 @@ using FinalProject_GameDataStruct.Class.Bomb;
 
 namespace FinalProject_GameDataStruct.Class
 {
-    internal class Player : IBombHandler
+    internal class Player
     {
-        Texture2D PlayerImage;
-        Vector2 PlayerPosition;
-        private int speed;
-        double radius;
+        public Texture2D PlayerTexture;
+        public Rectangle destRect;
+        public Rectangle srect;
+        public Vector2 velocity;
 
+        public Vector2 PlayerPosition;
+        public float speed;
 
-        public Player(Texture2D playerImage, Vector2 startingPosition)
+        //Animations
+        private Dictionary<string, Animation> animations;
+        private Animation currentAnimation;
+        public enum Direction
         {
-            PlayerImage = playerImage;
-            PlayerPosition = startingPosition;
+            Up,
+            Down,
+            Left,
+            Right
+        }
+        private Direction lastDirection = Direction.Down;
 
-            speed = 4;
-            radius = playerImage.Width / 2;
+        int tileSize = 16;
+
+        public Player(Texture2D playerTexture, Vector2 startingPosition)
+        {
+            PlayerTexture = playerTexture;
+            PlayerPosition = startingPosition;          
+
+            velocity = new Vector2(0, 0);
+            speed = 200f;
+
+            animations = new Dictionary<string, Animation>();
+
+            //Animation Setup
+            SetAnimations();            
+        }
+        public void UpdatePlayerLocation(KeyboardState keystate, GameTime gameTime)
+        {
+            velocity = Vector2.Zero;
+            bool isMoving = false;
+
+            if ((keystate.IsKeyDown(Keys.Right) || keystate.IsKeyDown(Keys.D)) &&
+        !(keystate.IsKeyDown(Keys.Left) || keystate.IsKeyDown(Keys.A)))
+            {
+                velocity.X = 1;
+                currentAnimation = animations["WalkingRight"];
+                lastDirection = Direction.Right;
+                isMoving = true;
+            }
+            else if ((keystate.IsKeyDown(Keys.Left) || keystate.IsKeyDown(Keys.A)) &&
+             !(keystate.IsKeyDown(Keys.Right) || keystate.IsKeyDown(Keys.D)))
+            {
+                velocity.X = -1;
+                currentAnimation = animations["WalkingLeft"];
+                lastDirection = Direction.Left;
+                isMoving = true;
+            }
+            else if ((keystate.IsKeyDown(Keys.Up) || keystate.IsKeyDown(Keys.W)) &&
+             !(keystate.IsKeyDown(Keys.Down) || keystate.IsKeyDown(Keys.S)))
+            {
+                velocity.Y = -1;
+                currentAnimation = animations["WalkingUp"];
+                lastDirection = Direction.Up;
+                isMoving = true;
+            }
+            else if ((keystate.IsKeyDown(Keys.Down) || keystate.IsKeyDown(Keys.S)) &&
+             !(keystate.IsKeyDown(Keys.Up) || keystate.IsKeyDown(Keys.W)))
+            {
+                velocity.Y = 1;
+                currentAnimation = animations["WalkingDown"];
+                lastDirection = Direction.Down;
+                isMoving = true;
+            }
+
+            //If we decide to move it diagonally
+            // Normalize velocity to ensure diagonal movement isn't faster
+            if (velocity != Vector2.Zero)
+            {
+                velocity.Normalize();
+            }
+
+            // Apply movement scaled by speed and elapsed time
+            float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            PlayerPosition += velocity * speed * deltaTime;
+
+            // Handle Idle animation based on last direction
+            if (!isMoving)
+            {
+                switch (lastDirection)
+                {
+                    case Direction.Right:
+                        currentAnimation = animations["IdleRight"];
+                        break;
+                    case Direction.Left:
+                        currentAnimation = animations["IdleLeft"];
+                        break;
+                    case Direction.Up:
+                        currentAnimation = animations["IdleUp"];
+                        break;
+                    case Direction.Down:
+                    default:
+                        currentAnimation = animations["Idle"];
+                        break;
+                }
+            }
+
+            currentAnimation.Update(gameTime);
+
+            PlayerPosition.X = MathHelper.Clamp(PlayerPosition.X, 0, Game1.ScreenWidth - destRect.Width);
+            PlayerPosition.Y = MathHelper.Clamp(PlayerPosition.Y, 0, Game1.ScreenHeight - destRect.Height);
         }
 
-        public void UpdatePlayerLocation() { }
-
-        public void DrawPlayer() { }
-
-        public void ShootBomb()
+        public void DrawPlayer(SpriteBatch spriteBatch)
         {
-            throw new NotImplementedException();
+            int display_tilesize = 64;
+
+            destRect = new(
+                (int)PlayerPosition.X,
+                (int)PlayerPosition.Y,
+                    display_tilesize,
+                    display_tilesize);
+
+            int x = 0;
+            int y = 0;
+
+            Rectangle src = new(
+                x * tileSize,
+                y * tileSize,
+                tileSize,
+                tileSize
+                );
+
+            spriteBatch.Draw(PlayerTexture, destRect, currentAnimation.GetCurrentFrame(), Color.White);
         }
+
+        public void SetAnimations()
+        {
+            animations["Idle"] = new Animation(new List<Rectangle>
+            {
+                new Rectangle(0 * tileSize, 0 * tileSize, tileSize, tileSize),
+                new Rectangle(0 * tileSize, 0 * tileSize, tileSize, tileSize),
+                new Rectangle(1 * tileSize, 0 * tileSize, tileSize, tileSize),
+                new Rectangle(0 * tileSize, 0 * tileSize, tileSize, tileSize),
+                new Rectangle(0 * tileSize, 0 * tileSize, tileSize, tileSize)
+            }, 0.2f);
+            animations["IdleRight"] = new Animation(new List<Rectangle>
+            {
+                new Rectangle(0 * tileSize, 2 * tileSize, tileSize, tileSize),
+                new Rectangle(0 * tileSize, 2 * tileSize, tileSize, tileSize),
+                new Rectangle(1 * tileSize, 2 * tileSize, tileSize, tileSize),
+                new Rectangle(0 * tileSize, 2 * tileSize, tileSize, tileSize),
+                new Rectangle(0 * tileSize, 2 * tileSize, tileSize, tileSize)
+            }, 0.2f);
+            animations["IdleLeft"] = new Animation(new List<Rectangle>
+            {
+                new Rectangle(0 * tileSize, 1 * tileSize, tileSize, tileSize),
+                new Rectangle(0 * tileSize, 1 * tileSize, tileSize, tileSize),
+                new Rectangle(1 * tileSize, 1 * tileSize, tileSize, tileSize),
+                new Rectangle(0 * tileSize, 1 * tileSize, tileSize, tileSize),
+                new Rectangle(0 * tileSize, 1 * tileSize, tileSize, tileSize)
+            }, 0.2f);
+            animations["IdleUp"] = new Animation(new List<Rectangle>
+            {
+                new Rectangle(0 * tileSize, 3 * tileSize, tileSize, tileSize),
+                new Rectangle(0 * tileSize, 3 * tileSize, tileSize, tileSize),
+                new Rectangle(1 * tileSize, 3 * tileSize, tileSize, tileSize),
+                new Rectangle(0 * tileSize, 3 * tileSize, tileSize, tileSize),
+                new Rectangle(0 * tileSize, 3 * tileSize, tileSize, tileSize)
+            }, 0.2f);
+
+            animations["WalkingDown"] = new Animation(new List<Rectangle>
+            {
+                new Rectangle(2 * tileSize, 0 * tileSize, tileSize, tileSize),
+                new Rectangle(3 * tileSize, 0 * tileSize, tileSize, tileSize),
+                new Rectangle(4 * tileSize, 0 * tileSize, tileSize, tileSize)
+            }, 0.2f);
+
+            animations["WalkingUp"] = new Animation(new List<Rectangle>
+            {
+                new Rectangle(4 * tileSize, 3 * tileSize, tileSize, tileSize),
+                new Rectangle(3 * tileSize, 3 * tileSize, tileSize, tileSize),
+                new Rectangle(2 * tileSize, 3 * tileSize, tileSize, tileSize)
+            }, 0.2f);
+
+            animations["WalkingRight"] = new Animation(new List<Rectangle>
+            {
+                new Rectangle(2 * tileSize, 2 * tileSize, tileSize, tileSize),
+                new Rectangle(3 * tileSize, 2 * tileSize, tileSize, tileSize),
+                new Rectangle(4 * tileSize, 2 * tileSize, tileSize, tileSize)
+            }, 0.2f);
+
+            animations["WalkingLeft"] = new Animation(new List<Rectangle>
+            {
+                new Rectangle(2 * tileSize, 1 * tileSize, tileSize, tileSize),
+                new Rectangle(3 * tileSize, 1 * tileSize, tileSize, tileSize),
+                new Rectangle(4 * tileSize, 1 * tileSize, tileSize, tileSize)
+            }, 0.2f);
+
+            animations["Happy"] = new Animation(new List<Rectangle>
+            {
+                new Rectangle(0 * tileSize, 4 * tileSize, tileSize, tileSize),
+            }, 0.2f);
+
+            animations["Dead"] = new Animation(new List<Rectangle>
+            {
+                new Rectangle(1 * tileSize, 4 * tileSize, tileSize, tileSize)
+            }, 0.2f);
+
+            // Set default animation
+            currentAnimation = animations["Idle"];
+        }
+
+        public void PlayerWonAnimation()
+        {
+            currentAnimation = animations["Happy"];
+        }
+
+        public void PlayerLostAnimation()
+        {
+            currentAnimation = animations["Dead"];
+        }
+
     }
 }

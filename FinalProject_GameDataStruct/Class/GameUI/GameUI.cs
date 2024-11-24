@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework;
 using System.Reflection.Metadata;
 using Microsoft.Xna.Framework.Audio;
 
-namespace FinalProject_GameDataStruct.Class
+namespace FinalProject_GameDataStruct.Class.GameUI
 {
     internal class GameUI
     {
