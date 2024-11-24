@@ -20,7 +20,7 @@ namespace FinalProject_GameDataStruct.Class.Maps
     {
         protected Dictionary<Vector2, int> TileMap { get; private set; }
         protected Dictionary<Vector2, int> PropsMap { get; private set; }
-        protected Dictionary<Vector2, int> CollisionMap { get; private set; }
+        public Dictionary<Vector2, int> CollisionMap { get; private set; }
         protected Texture2D MapTexture { get; private set; }
 
         public GameMap(string mapFilePath,string propsFilePath,string collistionFilePath, Texture2D mapTexture)
@@ -97,6 +97,11 @@ namespace FinalProject_GameDataStruct.Class.Maps
                 }
 
             }
+        }
+
+        public Dictionary<Vector2, int> GetCollisionMap()
+        {
+            return CollisionMap;
         }
         public void SpawnEnemies() { }
     }

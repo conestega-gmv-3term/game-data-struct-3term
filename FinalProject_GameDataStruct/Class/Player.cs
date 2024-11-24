@@ -12,15 +12,15 @@ using FinalProject_GameDataStruct.Class.Bomb;
 
 namespace FinalProject_GameDataStruct.Class
 {
-    internal class Player : IBombHandler
+    internal class Player
     {
         public Texture2D PlayerTexture;
-        public Rectangle rect;
+        public Rectangle destRect;
         public Rectangle srect;
         public Vector2 velocity;
 
-        Vector2 PlayerPosition;
-        private float speed;
+        public Vector2 PlayerPosition;
+        public float speed;
 
         //Animations
         private Dictionary<string, Animation> animations;
@@ -54,28 +54,32 @@ namespace FinalProject_GameDataStruct.Class
             velocity = Vector2.Zero;
             bool isMoving = false;
 
-            if (keystate.IsKeyDown(Keys.Right) || keystate.IsKeyDown(Keys.D))
+            if ((keystate.IsKeyDown(Keys.Right) || keystate.IsKeyDown(Keys.D)) &&
+        !(keystate.IsKeyDown(Keys.Left) || keystate.IsKeyDown(Keys.A)))
             {
                 velocity.X = 1;
                 currentAnimation = animations["WalkingRight"];
                 lastDirection = Direction.Right;
                 isMoving = true;
             }
-            if (keystate.IsKeyDown(Keys.Left) || keystate.IsKeyDown(Keys.A))
+            else if ((keystate.IsKeyDown(Keys.Left) || keystate.IsKeyDown(Keys.A)) &&
+             !(keystate.IsKeyDown(Keys.Right) || keystate.IsKeyDown(Keys.D)))
             {
                 velocity.X = -1;
                 currentAnimation = animations["WalkingLeft"];
                 lastDirection = Direction.Left;
                 isMoving = true;
             }
-            if (keystate.IsKeyDown(Keys.Up) || keystate.IsKeyDown(Keys.W))
+            else if ((keystate.IsKeyDown(Keys.Up) || keystate.IsKeyDown(Keys.W)) &&
+             !(keystate.IsKeyDown(Keys.Down) || keystate.IsKeyDown(Keys.S)))
             {
                 velocity.Y = -1;
                 currentAnimation = animations["WalkingUp"];
                 lastDirection = Direction.Up;
                 isMoving = true;
             }
-            if (keystate.IsKeyDown(Keys.Down) || keystate.IsKeyDown(Keys.S))
+            else if ((keystate.IsKeyDown(Keys.Down) || keystate.IsKeyDown(Keys.S)) &&
+             !(keystate.IsKeyDown(Keys.Up) || keystate.IsKeyDown(Keys.W)))
             {
                 velocity.Y = 1;
                 currentAnimation = animations["WalkingDown"];
@@ -83,6 +87,7 @@ namespace FinalProject_GameDataStruct.Class
                 isMoving = true;
             }
 
+            //If we decide to move it diagonally
             // Normalize velocity to ensure diagonal movement isn't faster
             if (velocity != Vector2.Zero)
             {
@@ -115,13 +120,16 @@ namespace FinalProject_GameDataStruct.Class
             }
 
             currentAnimation.Update(gameTime);
+
+            PlayerPosition.X = MathHelper.Clamp(PlayerPosition.X, 0, Game1.ScreenWidth - destRect.Width);
+            PlayerPosition.Y = MathHelper.Clamp(PlayerPosition.Y, 0, Game1.ScreenHeight - destRect.Height);
         }
 
         public void DrawPlayer(SpriteBatch spriteBatch)
         {
             int display_tilesize = 64;
 
-            Rectangle destRect = new(
+            destRect = new(
                 (int)PlayerPosition.X,
                 (int)PlayerPosition.Y,
                     display_tilesize,
@@ -227,9 +235,5 @@ namespace FinalProject_GameDataStruct.Class
             currentAnimation = animations["Dead"];
         }
 
-        public void ShootBomb()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
