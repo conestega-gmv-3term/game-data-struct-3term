@@ -54,32 +54,30 @@ namespace FinalProject_GameDataStruct.Class
             velocity = Vector2.Zero;
             bool isMoving = false;
 
-            if ((keystate.IsKeyDown(Keys.Right) || keystate.IsKeyDown(Keys.D)) &&
-        !(keystate.IsKeyDown(Keys.Left) || keystate.IsKeyDown(Keys.A)))
+            if ((keystate.IsKeyDown(Keys.Right) || keystate.IsKeyDown(Keys.D)))
             {
                 velocity.X = 1;
                 currentAnimation = animations["WalkingRight"];
                 lastDirection = Direction.Right;
                 isMoving = true;
             }
-            else if ((keystate.IsKeyDown(Keys.Left) || keystate.IsKeyDown(Keys.A)) &&
-             !(keystate.IsKeyDown(Keys.Right) || keystate.IsKeyDown(Keys.D)))
+            if ((keystate.IsKeyDown(Keys.Left) || keystate.IsKeyDown(Keys.A)))
             {
                 velocity.X = -1;
                 currentAnimation = animations["WalkingLeft"];
                 lastDirection = Direction.Left;
                 isMoving = true;
             }
-            else if ((keystate.IsKeyDown(Keys.Up) || keystate.IsKeyDown(Keys.W)) &&
-             !(keystate.IsKeyDown(Keys.Down) || keystate.IsKeyDown(Keys.S)))
+            if ((keystate.IsKeyDown(Keys.Up) || keystate.IsKeyDown(Keys.W)))
             {
                 velocity.Y = -1;
                 currentAnimation = animations["WalkingUp"];
                 lastDirection = Direction.Up;
                 isMoving = true;
             }
-            else if ((keystate.IsKeyDown(Keys.Down) || keystate.IsKeyDown(Keys.S)) &&
-             !(keystate.IsKeyDown(Keys.Up) || keystate.IsKeyDown(Keys.W)))
+            if ((keystate.IsKeyDown(Keys.Down) || keystate.IsKeyDown(Keys.S)) 
+
+             )
             {
                 velocity.Y = 1;
                 currentAnimation = animations["WalkingDown"];
@@ -87,7 +85,6 @@ namespace FinalProject_GameDataStruct.Class
                 isMoving = true;
             }
 
-            //If we decide to move it diagonally
             // Normalize velocity to ensure diagonal movement isn't faster
             if (velocity != Vector2.Zero)
             {
@@ -101,28 +98,13 @@ namespace FinalProject_GameDataStruct.Class
             // Handle Idle animation based on last direction
             if (!isMoving)
             {
-                switch (lastDirection)
-                {
-                    case Direction.Right:
-                        currentAnimation = animations["IdleRight"];
-                        break;
-                    case Direction.Left:
-                        currentAnimation = animations["IdleLeft"];
-                        break;
-                    case Direction.Up:
-                        currentAnimation = animations["IdleUp"];
-                        break;
-                    case Direction.Down:
-                    default:
-                        currentAnimation = animations["Idle"];
-                        break;
-                }
+                currentAnimation = animations[GetIdleAnimationKey()];
             }
 
             currentAnimation.Update(gameTime);
 
-            PlayerPosition.X = MathHelper.Clamp(PlayerPosition.X, 0, Game1.ScreenWidth - destRect.Width);
-            PlayerPosition.Y = MathHelper.Clamp(PlayerPosition.Y, 0, Game1.ScreenHeight - destRect.Height);
+            PlayerPosition.X = MathHelper.Clamp(PlayerPosition.X, 0 + 64, Game1.ScreenWidth - destRect.Width-64);
+            PlayerPosition.Y = MathHelper.Clamp(PlayerPosition.Y, 0 + 192, Game1.ScreenHeight - destRect.Height-64);
         }
 
         public void DrawPlayer(SpriteBatch spriteBatch)
@@ -157,7 +139,7 @@ namespace FinalProject_GameDataStruct.Class
                 new Rectangle(1 * tileSize, 0 * tileSize, tileSize, tileSize),
                 new Rectangle(0 * tileSize, 0 * tileSize, tileSize, tileSize),
                 new Rectangle(0 * tileSize, 0 * tileSize, tileSize, tileSize)
-            }, 0.2f);
+            }, 0.2f, true);
             animations["IdleRight"] = new Animation(new List<Rectangle>
             {
                 new Rectangle(0 * tileSize, 2 * tileSize, tileSize, tileSize),
@@ -165,7 +147,7 @@ namespace FinalProject_GameDataStruct.Class
                 new Rectangle(1 * tileSize, 2 * tileSize, tileSize, tileSize),
                 new Rectangle(0 * tileSize, 2 * tileSize, tileSize, tileSize),
                 new Rectangle(0 * tileSize, 2 * tileSize, tileSize, tileSize)
-            }, 0.2f);
+            }, 0.2f, true);
             animations["IdleLeft"] = new Animation(new List<Rectangle>
             {
                 new Rectangle(0 * tileSize, 1 * tileSize, tileSize, tileSize),
@@ -173,7 +155,7 @@ namespace FinalProject_GameDataStruct.Class
                 new Rectangle(1 * tileSize, 1 * tileSize, tileSize, tileSize),
                 new Rectangle(0 * tileSize, 1 * tileSize, tileSize, tileSize),
                 new Rectangle(0 * tileSize, 1 * tileSize, tileSize, tileSize)
-            }, 0.2f);
+            }, 0.2f, true);
             animations["IdleUp"] = new Animation(new List<Rectangle>
             {
                 new Rectangle(0 * tileSize, 3 * tileSize, tileSize, tileSize),
@@ -181,48 +163,59 @@ namespace FinalProject_GameDataStruct.Class
                 new Rectangle(1 * tileSize, 3 * tileSize, tileSize, tileSize),
                 new Rectangle(0 * tileSize, 3 * tileSize, tileSize, tileSize),
                 new Rectangle(0 * tileSize, 3 * tileSize, tileSize, tileSize)
-            }, 0.2f);
+            }, 0.2f, true);
 
             animations["WalkingDown"] = new Animation(new List<Rectangle>
             {
                 new Rectangle(2 * tileSize, 0 * tileSize, tileSize, tileSize),
                 new Rectangle(3 * tileSize, 0 * tileSize, tileSize, tileSize),
                 new Rectangle(4 * tileSize, 0 * tileSize, tileSize, tileSize)
-            }, 0.2f);
+            }, 0.2f, true);
 
             animations["WalkingUp"] = new Animation(new List<Rectangle>
             {
                 new Rectangle(4 * tileSize, 3 * tileSize, tileSize, tileSize),
                 new Rectangle(3 * tileSize, 3 * tileSize, tileSize, tileSize),
                 new Rectangle(2 * tileSize, 3 * tileSize, tileSize, tileSize)
-            }, 0.2f);
+            }, 0.2f, true);
 
             animations["WalkingRight"] = new Animation(new List<Rectangle>
             {
                 new Rectangle(2 * tileSize, 2 * tileSize, tileSize, tileSize),
                 new Rectangle(3 * tileSize, 2 * tileSize, tileSize, tileSize),
                 new Rectangle(4 * tileSize, 2 * tileSize, tileSize, tileSize)
-            }, 0.2f);
+            }, 0.2f, true);
 
             animations["WalkingLeft"] = new Animation(new List<Rectangle>
             {
                 new Rectangle(2 * tileSize, 1 * tileSize, tileSize, tileSize),
                 new Rectangle(3 * tileSize, 1 * tileSize, tileSize, tileSize),
                 new Rectangle(4 * tileSize, 1 * tileSize, tileSize, tileSize)
-            }, 0.2f);
+            }, 0.2f, true);
 
             animations["Happy"] = new Animation(new List<Rectangle>
             {
                 new Rectangle(0 * tileSize, 4 * tileSize, tileSize, tileSize),
-            }, 0.2f);
+            }, 0.2f, true);
 
             animations["Dead"] = new Animation(new List<Rectangle>
             {
                 new Rectangle(1 * tileSize, 4 * tileSize, tileSize, tileSize)
-            }, 0.2f);
+            }, 0.2f, true);
 
             // Set default animation
             currentAnimation = animations["Idle"];
+        }
+
+        private string GetIdleAnimationKey()
+        {
+            return lastDirection switch
+            {
+                Direction.Right => "IdleRight",
+                Direction.Left => "IdleLeft",
+                Direction.Up => "IdleUp",
+                Direction.Down or _ => "Idle"
+            };
         }
 
         public void PlayerWonAnimation()

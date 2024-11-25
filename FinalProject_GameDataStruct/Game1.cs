@@ -29,12 +29,14 @@ namespace FinalProject_GameDataStruct
 
         //Screen variables
         public static int ScreenWidth = 1088;
-        public static int ScreenHeight = 1088;
+        public static int ScreenHeight = 1152;
 
         private Texture2D rectangleTexture;
 
         //Blocks
         private MissileManager _missileManager;
+        private Texture2D MissileTexture;
+        private Texture2D ExplosionTexture;
 
         public Game1()
         {
@@ -47,7 +49,7 @@ namespace FinalProject_GameDataStruct
             _graphics.ApplyChanges();
 
             _maps = new Dictionary<string, GameMap>();
-            _missileManager = new MissileManager();
+           
 
         }
 
@@ -62,27 +64,30 @@ namespace FinalProject_GameDataStruct
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            //Map Related
-            _mapTexture = Content.Load<Texture2D>("Tilemap_Tiles");
+            //Textures
 
+            //Map Related
+            _mapTexture = Content.Load<Texture2D>("Tilemap");
+            //Player Related
+            _playerTexture = Content.Load<Texture2D>("Character_Chart");
+            //Missile Related
+            MissileTexture = Content.Load<Texture2D>("Enemy_Chart");
+            ExplosionTexture = Content.Load<Texture2D>("explosion");
+
+
+            //Objects
+            //Map Related
             _maps.Add("map01", new GameMap(
-                "../../../Data/Map01_Floor_Layer.csv",
-                "../../../Data/Map01_Top_Layer.csv",
-                "../../../Data/Map01_Collision.csv",
+                "../../../Data/Map01_Complete_Ground.csv",
                 _mapTexture
             ));
-
             _currentMap = _maps["map01"];
 
             //Player Related
-            _playerTexture = Content.Load<Texture2D>("Character_Chart");
-            _player = new Player(_playerTexture, new Vector2 (128,192));            
+            _player = new Player(_playerTexture, new Vector2 (ScreenWidth/2 -32,ScreenHeight/2 - 32));
 
-
-            rectangleTexture = new Texture2D(GraphicsDevice, 1, 1);
-            rectangleTexture.SetData(new Color[] { new(255, 0, 0, 255) });
-
-
+            //Missile Related            
+            _missileManager = new MissileManager(MissileTexture, ExplosionTexture);
         }
 
         protected override void Update(GameTime gameTime)
@@ -95,7 +100,7 @@ namespace FinalProject_GameDataStruct
             _player.UpdatePlayerLocation(Keyboard.GetState(), gameTime);
 
 
-            // Update blocks
+            // Update missiles
             _missileManager.Update(gameTime);
 
             // Check collisions
@@ -117,16 +122,17 @@ namespace FinalProject_GameDataStruct
 
             _currentMap.DrawCompleteMap(_spriteBatch);
 
-
             _player.DrawPlayer(_spriteBatch);
 
-            _missileManager.Draw(_spriteBatch, rectangleTexture);
+            _missileManager.Draw(_spriteBatch);
 
             _spriteBatch.End();
 
             base.Draw(gameTime);
         }
 
+
+        //This method we can use to draw rectangles (good for debugging)
         public void DrawRectHollow(SpriteBatch spriteBatch, Rectangle rect, int thickness)
         {
             spriteBatch.Draw(
