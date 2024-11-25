@@ -23,12 +23,10 @@ namespace FinalProject_GameDataStruct.Class.Maps
         public Dictionary<Vector2, int> CollisionMap { get; private set; }
         protected Texture2D MapTexture { get; private set; }
 
-        public GameMap(string mapFilePath,string propsFilePath,string collistionFilePath, Texture2D mapTexture)
+        public GameMap(string mapFilePath, Texture2D mapTexture)
         {
             MapTexture = mapTexture;
             TileMap = LoadMap(mapFilePath);
-            PropsMap = LoadMap(propsFilePath);
-            CollisionMap = LoadMap(collistionFilePath);
         }
 
         //Method to extract the map from the csv file
@@ -64,8 +62,6 @@ namespace FinalProject_GameDataStruct.Class.Maps
         {
             
             DrawTileMap(spriteBatch, TileMap);
-            DrawTileMap(spriteBatch, PropsMap);
-
         }
         private void DrawTileMap(SpriteBatch spriteBatch, Dictionary<Vector2, int> map)
         {

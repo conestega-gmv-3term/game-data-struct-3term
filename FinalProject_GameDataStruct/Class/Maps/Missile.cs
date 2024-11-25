@@ -1,10 +1,7 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace FinalProject_GameDataStruct.Class.Maps
 {
@@ -15,19 +12,86 @@ namespace FinalProject_GameDataStruct.Class.Maps
         public int Width { get; set; } = 32;
         public int Height { get; set; } = 32;
 
+        public enum MissileState { Falling, Exploding, Finished }
+        public MissileState State { get; private set; } = MissileState.Falling;
+
+        private Texture2D MissileTexture;
+        private Texture2D ExplosionTexture;
+
+        private Dictionary<string, Animation> animations;
+        private Animation currentAnimation;
+        int tileSize = 16;
+        int tileSizeExplosion = 64;
+        private float targetY;
+
         public Rectangle CollisionBox => new Rectangle((int)Position.X, (int)Position.Y, Width, Height);
+
+        public Missile(float targetY, Texture2D missileTexture, Texture2D explosionTexture)
+        {
+            animations = new Dictionary<string, Animation>();
+
+            this.targetY = targetY;
+            MissileTexture = missileTexture;
+            ExplosionTexture = explosionTexture;
+
+            SetAnimations();
+        }
 
         public void Update(GameTime gameTime)
         {
-            // Move the block downward
-            Position.Y += Speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            if (State == MissileState.Falling)
+            {
+                Position.Y += Speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            // Optionally, add logic to remove the block if it goes off-screen
+                if (Position.Y >= targetY)
+                {
+                    State = MissileState.Exploding; // Use ChangeState to transition
+                }
+            }
+            else if (State == MissileState.Exploding)
+            {
+                currentAnimation.Update(gameTime);
+
+                if (currentAnimation.IsFinished)
+                {
+                    State = MissileState.Finished;
+                }
+            }
         }
 
-        public void Draw(SpriteBatch spriteBatch, Texture2D texture)
+        public void SetAnimations()
         {
-            spriteBatch.Draw(texture, CollisionBox, Color.Red); // Use Red for blocks
+            animations["Falling"] = new Animation(new List<Rectangle>
+            {
+                new Rectangle(2 * tileSize, 4 * tileSize, tileSize, tileSize),
+            }, 0.2f, true);
+            animations["Exploding"] = new Animation(new List<Rectangle>
+            {
+                new Rectangle(0 * tileSizeExplosion, 0 * tileSizeExplosion, tileSizeExplosion, tileSizeExplosion),
+                new Rectangle(0 * tileSizeExplosion, 1 * tileSizeExplosion, tileSizeExplosion, tileSizeExplosion),
+                new Rectangle(0 * tileSizeExplosion, 2 * tileSizeExplosion, tileSizeExplosion, tileSizeExplosion),
+                new Rectangle(0 * tileSizeExplosion, 3 * tileSizeExplosion, tileSizeExplosion, tileSizeExplosion),
+                new Rectangle(0 * tileSizeExplosion, 4 * tileSizeExplosion, tileSizeExplosion, tileSizeExplosion)
+            }, 0.2f, false);
+
+            currentAnimation = animations["Falling"];
         }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            if (State == MissileState.Falling)
+            {
+                currentAnimation = animations["Falling"];
+                spriteBatch.Draw(MissileTexture, CollisionBox, currentAnimation.GetCurrentFrame(), Color.White);
+                
+            }
+            else if (State == MissileState.Exploding)
+            {
+                currentAnimation = animations["Exploding"];
+                spriteBatch.Draw(ExplosionTexture, CollisionBox, currentAnimation.GetCurrentFrame(), Color.White);
+            }
+            //Debug.WriteLine($"Current State: {currentAnimation.IsFinished}");
+        }
+
     }
 }

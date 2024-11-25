@@ -5,18 +5,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace FinalProject_GameDataStruct.Class.Maps
 {
     public class MissileManager
     {
-        private List<Missile> blocks = new List<Missile>();
+        private List<Missile> missiles = new List<Missile>();
         private Random random = new Random();
 
         private float spawnTimer = 0f;
         private float spawnInterval = 1f; // Initial spawn interval
         private float difficultyTimer = 0f;
         private float difficultyIncreaseInterval = 10f; // Every 10 seconds
+
+        private Animation explosionAnimation;
+
+        private Texture2D MissileTexture;
+        private Texture2D ExplosionTexture;
+
+
+        public MissileManager(Texture2D missileTexture, Texture2D explosionTexture)
+        {
+            MissileTexture = missileTexture;
+            ExplosionTexture = explosionTexture;
+        }
 
         public void Update(GameTime gameTime)
         {
@@ -33,37 +47,29 @@ namespace FinalProject_GameDataStruct.Class.Maps
             // Spawn new blocks at intervals
             if (spawnTimer >= spawnInterval)
             {
-                SpawnBlock();
+                SpawnMissile();
                 spawnTimer = 0f;
             }
 
             // Update all blocks
-            foreach (var block in blocks)
+            foreach (var missile in missiles)
             {
-                block.Update(gameTime);
+                missile.Update(gameTime);
             }
 
-            // Remove blocks that have gone off-screen
-            blocks.RemoveAll(block =>
-            {
-                if (block.Position.Y > Game1.ScreenHeight)
-                {
-                    // Placeholder for increasing the score
-                    // GameManager.Instance.IncreaseScore(); // Uncomment once GameManager is implemented
-                    return true; // Remove block
-                }
-                return false;
-            });
+            // Remove missiles that are done exploding
+            missiles.RemoveAll(missile => missile.State == Missile.MissileState.Finished);
         }
 
-        private void SpawnBlock()
+        private void SpawnMissile()
         {
-            float x = random.Next(0, Game1.ScreenWidth - 32); // Random X position
-            float speed = random.Next(100, 300); // Random speed
+            float x = random.Next(64, Game1.ScreenWidth - 64);
+            float speed = random.Next(100, 300);
+            float targetY = random.Next(192, Game1.ScreenHeight - 64);
 
-            blocks.Add(new Missile
+            missiles.Add(new Missile(targetY, MissileTexture, ExplosionTexture)
             {
-                Position = new Vector2(x, -32), // Start above the screen
+                Position = new Vector2(x, -32),
                 Speed = speed
             });
         }
@@ -71,9 +77,9 @@ namespace FinalProject_GameDataStruct.Class.Maps
         public bool CheckCollision(Rectangle playerBox)
         {
             // Check if the player intersects any block
-            foreach (var block in blocks)
+            foreach (var missile in missiles)
             {
-                if (block.CollisionBox.Intersects(playerBox))
+                if (missile.CollisionBox.Intersects(playerBox))
                 {
                     return true; // Collision detected
                 }
@@ -82,11 +88,11 @@ namespace FinalProject_GameDataStruct.Class.Maps
             return false; // No collision
         }
 
-        public void Draw(SpriteBatch spriteBatch, Texture2D blockTexture)
+        public void Draw(SpriteBatch spriteBatch)
         {
-            foreach (var block in blocks)
+            foreach (var missile in missiles)
             {
-                block.Draw(spriteBatch, blockTexture);
+                missile.Draw(spriteBatch);
             }
         }
     }
