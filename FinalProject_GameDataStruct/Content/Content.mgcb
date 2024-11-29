@@ -85,3 +85,39 @@
 /processorParam:TextureFormat=Color
 /build:../Images/Tilemap.png;Tilemap.png
 
+#begin ../Sounds/credits-music.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:../Sounds/credits-music.mp3;credits-music.mp3
+
+#begin ../Sounds/explosion-sound-effect.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:../Sounds/explosion-sound-effect.mp3;explosion-sound-effect.mp3
+
+#begin ../Sounds/explosion-sound-effectWAV.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../Sounds/explosion-sound-effectWAV.wav;explosion-sound-effectWAV.wav
+
+#begin ../Sounds/gameplay-music.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:../Sounds/gameplay-music.mp3;gameplay-music.mp3
+
+#begin ../Sounds/tank-track-ratteling.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:../Sounds/tank-track-ratteling.mp3;tank-track-ratteling.mp3
+
+#begin ../Sounds/tank-track-rattelingWAV.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:../Sounds/tank-track-rattelingWAV.wav;tank-track-rattelingWAV.wav
+

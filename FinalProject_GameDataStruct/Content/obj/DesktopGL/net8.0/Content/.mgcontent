@@ -10,6 +10,12 @@
     <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/Game/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Images/Tilemap_Collision.png</File>
     <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/Game/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Images/Tilemap_Tiles.png</File>
     <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/Game/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Images/Tilemap.png</File>
+    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/Game/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Sounds/credits-music.mp3</File>
+    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/Game/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Sounds/explosion-sound-effect.mp3</File>
+    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/Game/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Sounds/explosion-sound-effectWAV.wav</File>
+    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/Game/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Sounds/gameplay-music.mp3</File>
+    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/Game/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Sounds/tank-track-ratteling.mp3</File>
+    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/Game/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Sounds/tank-track-rattelingWAV.wav</File>
   </SourceFiles>
   <DestFiles>
     <File>Character_Chart.png</File>
@@ -18,5 +24,11 @@
     <File>Tilemap_Collision.png</File>
     <File>Tilemap_Tiles.png</File>
     <File>Tilemap.png</File>
+    <File>credits-music.mp3</File>
+    <File>explosion-sound-effect.mp3</File>
+    <File>explosion-sound-effectWAV.wav</File>
+    <File>gameplay-music.mp3</File>
+    <File>tank-track-ratteling.mp3</File>
+    <File>tank-track-rattelingWAV.wav</File>
   </DestFiles>
 </SourceFileCollection>

@@ -46,6 +46,7 @@ namespace FinalProject_GameDataStruct.Class.Maps
                 if (Position.Y >= targetY)
                 {
                     State = MissileState.Exploding; // Use ChangeState to transition
+                    SoundManager.PlayExplosionSound();
                 }
             }
             else if (State == MissileState.Exploding)
