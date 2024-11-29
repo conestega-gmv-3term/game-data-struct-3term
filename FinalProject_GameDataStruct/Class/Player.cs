@@ -105,6 +105,16 @@ namespace FinalProject_GameDataStruct.Class
 
             PlayerPosition.X = MathHelper.Clamp(PlayerPosition.X, 0 + 64, Game1.ScreenWidth - destRect.Width-64);
             PlayerPosition.Y = MathHelper.Clamp(PlayerPosition.Y, 0 + 192, Game1.ScreenHeight - destRect.Height-64);
+
+            //Sound related
+            if (isMoving)
+            {
+                SoundManager.PlayPlayerMovingSound();
+            }
+            else
+            {
+                SoundManager.StopPlayerMovingSound();
+            }
         }
 
         public void DrawPlayer(SpriteBatch spriteBatch)
