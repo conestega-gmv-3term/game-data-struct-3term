@@ -82,47 +82,91 @@ C:\Users\guilh\OneDrive\Documents\Term_3\Game Programming with Data Structures\G
 C:\Users\guilh\OneDrive\Documents\Term_3\Game Programming with Data Structures\Game Project - 30-11\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalPro.4A18ABE3.Up2Date
 C:\Users\guilh\OneDrive\Documents\Term_3\Game Programming with Data Structures\Game Project - 30-11\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.genruntimeconfig.cache
 C:\Users\guilh\OneDrive\Documents\Term_3\Game Programming with Data Structures\Game Project - 30-11\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\ref\FinalProject_GameDataStruct.dll
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Character_Chart.xnb
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\credits-music.ogg
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\credits-music.xnb
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Enemy_Chart.xnb
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\explosion-sound-effect.ogg
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\explosion-sound-effect.xnb
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\explosion-sound-effectWAV.xnb
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\explosion.xnb
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\gameplay-music.ogg
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\gameplay-music.xnb
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Rectangle.xnb
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\tank-track-ratteling.ogg
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\tank-track-ratteling.xnb
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\tank-track-rattelingWAV.xnb
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Tilemap.xnb
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Tilemap_Collision.xnb
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Tilemap_Tiles.xnb
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\timerFont.xnb
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\FinalProject_GameDataStruct.exe
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\FinalProject_GameDataStruct.deps.json
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\FinalProject_GameDataStruct.runtimeconfig.json
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\FinalProject_GameDataStruct.dll
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\FinalProject_GameDataStruct.pdb
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\MonoGame.Framework.dll
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\NVorbis.dll
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\linux-x64\native\libopenal.so.1
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\osx\native\libopenal.1.dylib
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\win-x64\native\soft_oal.dll
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\win-x86\native\soft_oal.dll
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\osx\native\libSDL2.dylib
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\win-x64\native\SDL2.dll
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.csproj.AssemblyReference.cache
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.GeneratedMSBuildEditorConfig.editorconfig
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.AssemblyInfoInputs.cache
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.AssemblyInfo.cs
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.csproj.CoreCompileInputs.cache
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.sourcelink.json
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalPro.4A18ABE3.Up2Date
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.dll
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\refint\FinalProject_GameDataStruct.dll
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.pdb
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.genruntimeconfig.cache
-C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\ref\FinalProject_GameDataStruct.dll
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Character_Chart.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\credits-music.ogg
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\credits-music.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Enemy_Chart.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\explosion-sound-effect.ogg
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\explosion-sound-effect.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\explosion-sound-effectWAV.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\explosion.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\gameplay-music.ogg
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\gameplay-music.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Rectangle.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\tank-track-ratteling.ogg
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\tank-track-ratteling.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\tank-track-rattelingWAV.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Tilemap.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Tilemap_Collision.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Tilemap_Tiles.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\timerFont.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\FinalProject_GameDataStruct.exe
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\FinalProject_GameDataStruct.deps.json
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\FinalProject_GameDataStruct.runtimeconfig.json
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\FinalProject_GameDataStruct.dll
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\FinalProject_GameDataStruct.pdb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\MonoGame.Framework.dll
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\NVorbis.dll
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\osx\native\libopenal.1.dylib
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\win-x64\native\soft_oal.dll
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\win-x86\native\soft_oal.dll
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\osx\native\libSDL2.dylib
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\win-x64\native\SDL2.dll
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.csproj.AssemblyReference.cache
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.AssemblyInfoInputs.cache
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.AssemblyInfo.cs
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.csproj.CoreCompileInputs.cache
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.sourcelink.json
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalPro.4A18ABE3.Up2Date
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.dll
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\refint\FinalProject_GameDataStruct.dll
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.pdb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.genruntimeconfig.cache
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\MainProject\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\ref\FinalProject_GameDataStruct.dll
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Character_Chart.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\credits-music.ogg
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\credits-music.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Enemy_Chart.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\explosion-sound-effect.ogg
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\explosion-sound-effect.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\explosion-sound-effectWAV.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\explosion.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\gameplay-music.ogg
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\gameplay-music.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Rectangle.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\tank-track-ratteling.ogg
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\tank-track-ratteling.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\tank-track-rattelingWAV.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Tilemap.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Tilemap_Collision.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Tilemap_Tiles.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\timerFont.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\FinalProject_GameDataStruct.exe
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\FinalProject_GameDataStruct.deps.json
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\FinalProject_GameDataStruct.runtimeconfig.json
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\FinalProject_GameDataStruct.dll
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\FinalProject_GameDataStruct.pdb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\MonoGame.Framework.dll
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\NVorbis.dll
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\osx\native\libopenal.1.dylib
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\win-x64\native\soft_oal.dll
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\win-x86\native\soft_oal.dll
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\osx\native\libSDL2.dylib
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\runtimes\win-x64\native\SDL2.dll
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.csproj.AssemblyReference.cache
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.AssemblyInfoInputs.cache
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.AssemblyInfo.cs
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.csproj.CoreCompileInputs.cache
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.sourcelink.json
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalPro.4A18ABE3.Up2Date
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.dll
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\refint\FinalProject_GameDataStruct.dll
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.pdb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\FinalProject_GameDataStruct.genruntimeconfig.cache
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\obj\Debug\net8.0\ref\FinalProject_GameDataStruct.dll
