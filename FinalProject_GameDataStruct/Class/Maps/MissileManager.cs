@@ -20,8 +20,6 @@ namespace FinalProject_GameDataStruct.Class.Maps
         private float difficultyTimer = 0f;
         private float difficultyIncreaseInterval = 10f; // Every 10 seconds
 
-        private Animation explosionAnimation;
-
         private Texture2D MissileTexture;
         private Texture2D ExplosionTexture;
 
@@ -32,6 +30,10 @@ namespace FinalProject_GameDataStruct.Class.Maps
             ExplosionTexture = explosionTexture;
         }
 
+        /// <summary>
+        /// Method to update every missile whitin the game.
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void Update(GameTime gameTime)
         {
             spawnTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -44,14 +46,14 @@ namespace FinalProject_GameDataStruct.Class.Maps
                 difficultyTimer = 0f;
             }
 
-            // Spawn new blocks at intervals
+            // Spawn new missile at intervals
             if (spawnTimer >= spawnInterval)
             {
                 SpawnMissile();
                 spawnTimer = 0f;
             }
 
-            // Update all blocks
+            // Update all missiles
             foreach (var missile in missiles)
             {
                 missile.Update(gameTime);
@@ -61,6 +63,9 @@ namespace FinalProject_GameDataStruct.Class.Maps
             missiles.RemoveAll(missile => missile.State == Missile.MissileState.Finished);
         }
 
+        /// <summary>
+        /// Method to spawn new missile at a random position and a random target posiiton.
+        /// </summary>
         private void SpawnMissile()
         {
             float x = random.Next(64, Game1.ScreenWidth - 64);
@@ -74,6 +79,11 @@ namespace FinalProject_GameDataStruct.Class.Maps
             });
         }
 
+        /// <summary>
+        /// Method to check if the missile collided with the player rectangle.
+        /// </summary>
+        /// <param name="playerBox"></param>
+        /// <returns></returns>
         public bool CheckCollision(Rectangle playerBox)
         {
             // Check if the player intersects any block
@@ -81,6 +91,7 @@ namespace FinalProject_GameDataStruct.Class.Maps
             {
                 if (missile.CollisionBox.Intersects(playerBox))
                 {
+                    missile.SetExplodingState();
                     return true; // Collision detected
                 }
             }
@@ -88,6 +99,10 @@ namespace FinalProject_GameDataStruct.Class.Maps
             return false; // No collision
         }
 
+        /// <summary>
+        /// Method to draw all the missiles.
+        /// </summary>
+        /// <param name="spriteBatch"></param>
         public void Draw(SpriteBatch spriteBatch)
         {
             foreach (var missile in missiles)

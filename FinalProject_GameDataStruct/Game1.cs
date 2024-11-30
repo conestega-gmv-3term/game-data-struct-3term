@@ -103,7 +103,7 @@ namespace FinalProject_GameDataStruct
             // Update missiles
             _missileManager.Update(gameTime);
 
-            // Check collisions
+            // Check collisions with missiles
             if (_missileManager.CheckCollision(_player.destRect))
             {
                 Console.WriteLine("Game Over!");

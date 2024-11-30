@@ -37,6 +37,10 @@ namespace FinalProject_GameDataStruct.Class.Maps
             SetAnimations();
         }
 
+        /// <summary>
+        /// This method will update the missile position.
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void Update(GameTime gameTime)
         {
             if (State == MissileState.Falling)
@@ -45,7 +49,7 @@ namespace FinalProject_GameDataStruct.Class.Maps
 
                 if (Position.Y >= targetY)
                 {
-                    State = MissileState.Exploding; // Use ChangeState to transition
+                    SetExplodingState(); // Use ChangeState to transition
                 }
             }
             else if (State == MissileState.Exploding)
@@ -58,7 +62,9 @@ namespace FinalProject_GameDataStruct.Class.Maps
                 }
             }
         }
-
+        /// <summary>
+        /// Method to set the animations for the missile.
+        /// </summary>
         public void SetAnimations()
         {
             animations["Falling"] = new Animation(new List<Rectangle>
@@ -77,6 +83,10 @@ namespace FinalProject_GameDataStruct.Class.Maps
             currentAnimation = animations["Falling"];
         }
 
+        /// <summary>
+        /// Method to draw the missile based on its state.
+        /// </summary>
+        /// <param name="spriteBatch"></param>
         public void Draw(SpriteBatch spriteBatch)
         {
             if (State == MissileState.Falling)
@@ -89,8 +99,12 @@ namespace FinalProject_GameDataStruct.Class.Maps
             {
                 currentAnimation = animations["Exploding"];
                 spriteBatch.Draw(ExplosionTexture, CollisionBox, currentAnimation.GetCurrentFrame(), Color.White);
-            }
-            //Debug.WriteLine($"Current State: {currentAnimation.IsFinished}");
+            }            
+        }
+
+        public void SetExplodingState()
+        {
+            State = MissileState.Exploding;
         }
 
     }

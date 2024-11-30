@@ -28,6 +28,11 @@ namespace FinalProject_GameDataStruct.Class
             IsFinished = false;
         }
 
+        /// <summary>
+        /// Method to update the animations.
+        /// Based on the frame of the animation and the seconds passed, the animation will be updated.
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void Update(GameTime gameTime)
         {            
             elapsedTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -53,6 +58,10 @@ namespace FinalProject_GameDataStruct.Class
             }
         }
 
+        /// <summary>
+        /// Method that returns the current frame to be draw.
+        /// </summary>
+        /// <returns></returns>
         public Rectangle GetCurrentFrame()
         {
             return Frames[currentFrameIndex];

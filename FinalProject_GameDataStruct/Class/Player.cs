@@ -49,6 +49,12 @@ namespace FinalProject_GameDataStruct.Class
             //Animation Setup
             SetAnimations();            
         }
+
+        /// <summary>
+        /// Method to update the player location.
+        /// </summary>
+        /// <param name="keystate"></param>
+        /// <param name="gameTime"></param>
         public void UpdatePlayerLocation(KeyboardState keystate, GameTime gameTime)
         {
             velocity = Vector2.Zero;
@@ -107,6 +113,10 @@ namespace FinalProject_GameDataStruct.Class
             PlayerPosition.Y = MathHelper.Clamp(PlayerPosition.Y, 0 + 192, Game1.ScreenHeight - destRect.Height-64);
         }
 
+        /// <summary>
+        /// Method to draw the player.
+        /// </summary>
+        /// <param name="spriteBatch"></param>
         public void DrawPlayer(SpriteBatch spriteBatch)
         {
             int display_tilesize = 64;
@@ -130,6 +140,10 @@ namespace FinalProject_GameDataStruct.Class
             spriteBatch.Draw(PlayerTexture, destRect, currentAnimation.GetCurrentFrame(), Color.White);
         }
 
+        /// <summary>
+        /// Method to set the player animations.
+        /// 
+        /// </summary>
         public void SetAnimations()
         {
             animations["Idle"] = new Animation(new List<Rectangle>
@@ -207,6 +221,10 @@ namespace FinalProject_GameDataStruct.Class
             currentAnimation = animations["Idle"];
         }
 
+        /// <summary>
+        /// Method to set the current idle animation.
+        /// </summary>
+        /// <returns></returns>
         private string GetIdleAnimationKey()
         {
             return lastDirection switch
@@ -218,11 +236,17 @@ namespace FinalProject_GameDataStruct.Class
             };
         }
 
+        /// <summary>
+        /// Method to set the Victory animation.
+        /// </summary>
         public void PlayerWonAnimation()
         {
             currentAnimation = animations["Happy"];
         }
 
+        /// <summary>
+        /// Method to set the lost animation.
+        /// </summary>
         public void PlayerLostAnimation()
         {
             currentAnimation = animations["Dead"];

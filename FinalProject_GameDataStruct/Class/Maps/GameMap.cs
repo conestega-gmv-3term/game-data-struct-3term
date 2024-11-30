@@ -29,7 +29,12 @@ namespace FinalProject_GameDataStruct.Class.Maps
             TileMap = LoadMap(mapFilePath);
         }
 
-        //Method to extract the map from the csv file
+        /// <summary>
+        /// Method to extract the map from the csv file.
+        /// It will load it into a map to later be used to draw the map based on the tile position.
+        /// </summary>
+        /// <param name="filepath"></param>
+        /// <returns></returns>
         private Dictionary<Vector2, int> LoadMap(string filepath)
         {
             Dictionary<Vector2, int> result = new();
@@ -58,24 +63,36 @@ namespace FinalProject_GameDataStruct.Class.Maps
             return result;
         }
 
+        /// <summary>
+        /// Method to draw the map based on the tilemap.
+        /// If we have different layers, here we can add different calls to the method DrawTileMap() to draw the layers.
+        /// </summary>
+        /// <param name="spriteBatch"></param>
         public void DrawCompleteMap(SpriteBatch spriteBatch)
-        {
-            
+        {            
             DrawTileMap(spriteBatch, TileMap);
         }
+
+        /// <summary>
+        /// Method to draw the layer of the map.
+        /// </summary>
+        /// <param name="spriteBatch"></param>
+        /// <param name="map"></param>
         private void DrawTileMap(SpriteBatch spriteBatch, Dictionary<Vector2, int> map)
         {
             int display_tilesize = 64;
             int num_tiles_per_row = 8;
             int pixel_tilesize = 8;
 
+            // For each entry in the map, we are drawing the desired tile based on the Vector2 (location) and the value (the image).
+            // Multiplying for the display_tilesize to scale it to the desired screen size.
             foreach (var item in map)
             {
                 if (item.Value > -1)
                 {
                     Rectangle destRect = new(
-                (int)item.Key.X * display_tilesize,
-                (int)item.Key.Y * display_tilesize,
+                    (int)item.Key.X * display_tilesize,
+                    (int)item.Key.Y * display_tilesize,
                     display_tilesize,
                     display_tilesize);
 
@@ -95,6 +112,11 @@ namespace FinalProject_GameDataStruct.Class.Maps
             }
         }
 
+        /// <summary>
+        /// Method to return the collision map.
+        /// Currently unused        
+        /// </summary>
+        /// <returns></returns>
         public Dictionary<Vector2, int> GetCollisionMap()
         {
             return CollisionMap;
