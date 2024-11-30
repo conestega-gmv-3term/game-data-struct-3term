@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\Game\\Final\\MainProject\\game-data-struct-3term\\FinalProject_GameDataStruct\\FinalProject_GameDataStruct.csproj": {}
+    "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\G\\game-data-struct-3term\\FinalProject_GameDataStruct\\FinalProject_GameDataStruct.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\Game\\Final\\MainProject\\game-data-struct-3term\\FinalProject_GameDataStruct\\FinalProject_GameDataStruct.csproj": {
+    "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\G\\game-data-struct-3term\\FinalProject_GameDataStruct\\FinalProject_GameDataStruct.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\Game\\Final\\MainProject\\game-data-struct-3term\\FinalProject_GameDataStruct\\FinalProject_GameDataStruct.csproj",
+        "projectUniqueName": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\G\\game-data-struct-3term\\FinalProject_GameDataStruct\\FinalProject_GameDataStruct.csproj",
         "projectName": "FinalProject_GameDataStruct",
-        "projectPath": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\Game\\Final\\MainProject\\game-data-struct-3term\\FinalProject_GameDataStruct\\FinalProject_GameDataStruct.csproj",
+        "projectPath": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\G\\game-data-struct-3term\\FinalProject_GameDataStruct\\FinalProject_GameDataStruct.csproj",
         "packagesPath": "C:\\Users\\Venic\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\Game\\Final\\MainProject\\game-data-struct-3term\\FinalProject_GameDataStruct\\obj\\",
+        "outputPath": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\G\\game-data-struct-3term\\FinalProject_GameDataStruct\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
