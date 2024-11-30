@@ -1,4 +1,6 @@
 ﻿using FinalProject_GameDataStruct.Class;
+using FinalProject_GameDataStruct.Class.GameUI;
+using FinalProject_GameDataStruct.Class.GameUI.Screens;
 using FinalProject_GameDataStruct.Class.Maps;
 using Microsoft.VisualBasic;
 using Microsoft.Xna.Framework;
@@ -17,7 +19,7 @@ namespace FinalProject_GameDataStruct
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-
+        private GameManager _gameManager;
         //Map Related
         Dictionary<string ,GameMap> _maps;
         GameMap _currentMap;
@@ -39,6 +41,7 @@ namespace FinalProject_GameDataStruct
         private MissileManager _missileManager;
         private Texture2D MissileTexture;
         private Texture2D ExplosionTexture;
+        private Texture2D background;
 
         public Game1()
         {
@@ -51,7 +54,7 @@ namespace FinalProject_GameDataStruct
             _graphics.ApplyChanges();
 
             _maps = new Dictionary<string, GameMap>();
-           
+
 
         }
 
@@ -65,6 +68,8 @@ namespace FinalProject_GameDataStruct
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+            GameManager.gameUI = new GameUI(_spriteBatch, Content);
+            _gameManager = new GameManager();
 
             //Textures
 
@@ -76,17 +81,14 @@ namespace FinalProject_GameDataStruct
             MissileTexture = Content.Load<Texture2D>("Enemy_Chart");
             ExplosionTexture = Content.Load<Texture2D>("explosion");
 
-
             //Objects
             //Map Related
-            _maps.Add("map01", new GameMap(
-                "../../../Data/Map01_Complete_Ground.csv",
-                _mapTexture
-            ));
+            _maps.Add("map01", new GameMap("../../../Data/Map01_Complete_Ground.csv",_mapTexture));
             _currentMap = _maps["map01"];
 
+
             //Player Related
-            _player = new Player(_playerTexture, new Vector2 (ScreenWidth/2 -32,ScreenHeight/2 - 32));
+            _player = new Player(_playerTexture, new Vector2(ScreenWidth / 2 - 32, ScreenHeight / 2 - 32));
 
             //Missile Related            
             _missileManager = new MissileManager(MissileTexture, ExplosionTexture);
@@ -98,8 +100,6 @@ namespace FinalProject_GameDataStruct
                 endgame: Content.Load<Song>("credits-music"),
                 playerMoveSound: Content.Load<SoundEffect>("tank-track-rattelingWAV")
             );
-
-            SoundManager.PlayGamePlaySong();
         }
 
         protected override void Update(GameTime gameTime)
@@ -107,19 +107,35 @@ namespace FinalProject_GameDataStruct
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
-
-            _player.UpdatePlayerLocation(Keyboard.GetState(), gameTime);
+            _gameManager.Update();
 
 
-            // Update missiles
-            _missileManager.Update(gameTime);
-
-            // Check collisions
-            if (_missileManager.CheckCollision(_player.destRect))
+            if (GameManager.Status == Status.gameIsPlayed)
             {
-                Console.WriteLine("Game Over!");
-                Exit(); // End the game on collision
+                _player.UpdatePlayerLocation(Keyboard.GetState(), gameTime);
+
+                //// Update missiles
+                _missileManager.Update(gameTime);
+
+                //// Check collisions
+                if (_missileManager.CheckCollision(_player.destRect))
+                {
+                    Console.WriteLine("Game Over!");
+                    GameManager.isPlayingSong = false;
+                    GameManager.Status = Status.gameEnded;
+                }
+            }
+
+
+            //Game Pause
+            KeyboardState state = Keyboard.GetState();
+            if (state.IsKeyDown(Keys.Z))
+            {
+                GameManager.Status = Status.gamePaused;
+            }
+            if (state.IsKeyDown(Keys.X))
+            {
+                GameManager.Status = Status.gameIsPlayed;
             }
 
 
@@ -132,11 +148,20 @@ namespace FinalProject_GameDataStruct
 
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
 
-            _currentMap.DrawCompleteMap(_spriteBatch);
+            if (GameManager.Status != Status.gameEnded && GameManager.Status != Status.gamePaused)
+            {
+                _currentMap.DrawCompleteMap(_spriteBatch);
+            }
+            _gameManager.DrawScreen();
 
-            _player.DrawPlayer(_spriteBatch);
+            if (GameManager.Status == Status.gameIsPlayed)
+            {
+                _currentMap.DrawCompleteMap(_spriteBatch);
 
-            _missileManager.Draw(_spriteBatch);
+                _player.DrawPlayer(_spriteBatch);
+
+                _missileManager.Draw(_spriteBatch);
+            }
 
             _spriteBatch.End();
 

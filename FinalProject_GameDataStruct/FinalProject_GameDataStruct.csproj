@@ -27,6 +27,7 @@
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.2.1105" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Class\GameUI\Screens\Buttons\Images\" />
     <Folder Include="Content\bin\DesktopGL\Content\" />
   </ItemGroup>
   <Target Name="RestoreDotnetTools" BeforeTargets="Restore">

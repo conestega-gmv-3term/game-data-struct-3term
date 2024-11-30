@@ -1,34 +1,31 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
-using System.Reflection.Metadata;
-using Microsoft.Xna.Framework.Audio;
+using FinalProject_GameDataStruct.Class.GameUI.Screens;
+using Microsoft.Xna.Framework.Content;
 
 namespace FinalProject_GameDataStruct.Class.GameUI
 {
     internal class GameUI
     {
-        SpriteFont RegularFont;
-        SpriteFont SpecialFont;
-        int ScreenHeight;
-        int ScreenWidth;
+        static SpriteBatch _spriteBatch;
+        static ContentManager _contentManager;
+        bool SecondDraw = false;
 
-        public GameUI(SpriteFont regularFont, SpriteFont specialFont, int screenHeight, int screenWidth)
+        public GameUI(SpriteBatch spriteBatch, ContentManager Content)
         {
-            RegularFont = regularFont;
-            SpecialFont = specialFont;
-            ScreenHeight = screenHeight;
-            ScreenWidth = screenWidth;
+            _spriteBatch = spriteBatch;
+            _contentManager = Content;
         }
-
-        public void DrawStartMenuUI() { }
-        public void DrawEndMenuUI() { }
-        public void DrawGamePlayUI() { }
-        public void DrawGamePauseUI() { }
+        public void DrawScreen(UIScreen Screen)
+        {
+            if (SecondDraw == true)
+            {
+                Screen.Draw2(_spriteBatch, _contentManager);
+            }
+            else
+            {
+                Screen.Draw1(_spriteBatch, _contentManager);
+                SecondDraw = true;
+            }
+        }
     }
 }
