@@ -2,6 +2,7 @@
 using FinalProject_GameDataStruct.Class.GameUI;
 using FinalProject_GameDataStruct.Class.GameUI.Screens;
 using FinalProject_GameDataStruct.Class.Maps;
+using FinalProject_GameDataStruct.Class.EnemyClasses;
 using Microsoft.VisualBasic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
@@ -29,7 +30,12 @@ namespace FinalProject_GameDataStruct
         //Player Related
         Texture2D _playerTexture;
         Player _player;
+        private Vector2 playerPosition;
         private List<Rectangle> intersections;
+
+        //Enemy Related
+        Texture2D _enemyTexture;
+        EnemyBase _enemy;
 
         //Screen variables
         public static int ScreenWidth = 1088;
@@ -75,6 +81,8 @@ namespace FinalProject_GameDataStruct
             _mapTexture = Content.Load<Texture2D>("Tilemap");
             //Player Related
             _playerTexture = Content.Load<Texture2D>("Character_Chart");
+            //Enemy Related
+            _enemyTexture = Content.Load<Texture2D>("Enemy_Chart");
             //Missile Related
             MissileTexture = Content.Load<Texture2D>("Enemy_Chart");
             ExplosionTexture = Content.Load<Texture2D>("explosion");
@@ -90,6 +98,10 @@ namespace FinalProject_GameDataStruct
 
             //Player Related
             _player = new Player(_playerTexture, new Vector2 (ScreenWidth/2 -32,ScreenHeight/2 - 32));
+            playerPosition = new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2);
+
+            //Enemy Related
+            _enemy = new EnemyBase(_enemyTexture, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), 100, 50);
 
             //Missile Related            
             _missileManager = new MissileManager(MissileTexture, ExplosionTexture);
@@ -116,6 +128,10 @@ namespace FinalProject_GameDataStruct
             if (GameManager.Status == Status.gameIsPlayed)
             {
                 _player.UpdatePlayerLocation(Keyboard.GetState(), gameTime);
+
+                _enemy.UpdateEnemyLocation(playerPosition, gameTime);
+
+                base.Update(gameTime);
 
                 //// Update missiles
                 _missileManager.Update(gameTime);
@@ -162,6 +178,8 @@ namespace FinalProject_GameDataStruct
                 _currentMap.DrawCompleteMap(_spriteBatch);
 
                 _player.DrawPlayer(_spriteBatch);
+
+                _enemy.DrawEnemy(_spriteBatch);
 
                 _missileManager.Draw(_spriteBatch);
             }

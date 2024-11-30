@@ -12,7 +12,7 @@ namespace FinalProject_GameDataStruct.Class.EnemyClasses.Enemy
     {
         public Enemy_One(Texture2D enemyImage, Vector2 enemyPosition) : base(enemyImage, enemyPosition)
         {
-            this.speed = 2;
+            
         }
     }
 }
