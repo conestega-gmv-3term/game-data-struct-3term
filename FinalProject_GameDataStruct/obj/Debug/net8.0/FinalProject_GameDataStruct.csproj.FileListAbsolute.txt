@@ -30,3 +30,13 @@ C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\game-data-struct
 C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Tilemap_Collision.xnb
 C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Tilemap_Tiles.xnb
 C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\Enemy_Chart.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\credits-music.ogg
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\credits-music.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\explosion-sound-effect.ogg
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\explosion-sound-effect.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\gameplay-music.ogg
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\gameplay-music.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\tank-track-ratteling.ogg
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\tank-track-ratteling.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\explosion-sound-effectWAV.xnb
+C:\Users\Venic\OneDrive\Documents\College\Third_Term\Game\Final\game-data-struct-3term\FinalProject_GameDataStruct\bin\Debug\net8.0\Content\tank-track-rattelingWAV.xnb

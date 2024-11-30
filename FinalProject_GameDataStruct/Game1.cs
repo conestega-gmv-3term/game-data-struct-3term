@@ -2,8 +2,10 @@
 using FinalProject_GameDataStruct.Class.Maps;
 using Microsoft.VisualBasic;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -88,6 +90,16 @@ namespace FinalProject_GameDataStruct
 
             //Missile Related            
             _missileManager = new MissileManager(MissileTexture, ExplosionTexture);
+
+            //Sound Related
+            SoundManager.LoadContent(
+                explosionSound: Content.Load<SoundEffect>("explosion-sound-effectWAV"),
+                gameplay: Content.Load<Song>("gameplay-music"),
+                endgame: Content.Load<Song>("credits-music"),
+                playerMoveSound: Content.Load<SoundEffect>("tank-track-rattelingWAV")
+            );
+
+            SoundManager.PlayGamePlaySong();
         }
 
         protected override void Update(GameTime gameTime)

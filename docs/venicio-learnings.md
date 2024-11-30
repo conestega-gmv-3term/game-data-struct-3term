@@ -56,3 +56,25 @@ With the class done, I created a list of Animations at the Player class and add 
 
 This way, the project is scalable, and if I want to, I can use that same Animation class to deal with Enemy animation, or any other animation from the game.
 
+## 25/Nov./2024
+
+At this point in the project I decided to refactor some of the mechanics of the game.
+
+The scope was too big for the small time window we have. As such, the game is now a Survival Game instead of a Bomberman-like game.
+
+With that in mind, I added some new classes to better structure the new approach.
+
+The Missile and MissileManager classes were added. The idea is that, missiles will keep falling at random parts of the map, and if the player is hit by one of those, he loses.
+
+I also added the animations for the missile explosion on contact.
+
+With that refactor deno, we have a working game for the final project.
+
+## 29/Nov./2024
+
+Added sound to the game.
+
+For that I created a class SoundManager, this is going to be the class responsible for any sound at the game.
+
+I decided to make it static, so, any object we decide needs to have a sound can call a method from this class without instantiating it.
+
