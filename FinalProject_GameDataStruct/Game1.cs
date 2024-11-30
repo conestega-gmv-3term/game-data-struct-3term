@@ -1,4 +1,6 @@
 ﻿using FinalProject_GameDataStruct.Class;
+using FinalProject_GameDataStruct.Class.GameUI;
+using FinalProject_GameDataStruct.Class.GameUI.Screens;
 using FinalProject_GameDataStruct.Class.Maps;
 using Microsoft.VisualBasic;
 using Microsoft.Xna.Framework;
@@ -17,7 +19,7 @@ namespace FinalProject_GameDataStruct
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-
+        private GameManager _gameManager;
         //Map Related
         Dictionary<string ,GameMap> _maps;
         GameMap _currentMap;
@@ -65,7 +67,8 @@ namespace FinalProject_GameDataStruct
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            GameManager.gameUI = new GameUI(_spriteBatch, Content);
+            _gameManager = new GameManager();
             //Textures
 
             //Map Related
@@ -107,19 +110,35 @@ namespace FinalProject_GameDataStruct
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
-
-            _player.UpdatePlayerLocation(Keyboard.GetState(), gameTime);
+            _gameManager.Update();
 
 
-            // Update missiles
-            _missileManager.Update(gameTime);
-
-            // Check collisions with missiles
-            if (_missileManager.CheckCollision(_player.destRect))
+            if (GameManager.Status == Status.gameIsPlayed)
             {
-                Console.WriteLine("Game Over!");
-                Exit(); // End the game on collision
+                _player.UpdatePlayerLocation(Keyboard.GetState(), gameTime);
+
+                //// Update missiles
+                _missileManager.Update(gameTime);
+
+                //// Check collisions
+                if (_missileManager.CheckCollision(_player.destRect))
+                {
+                    Console.WriteLine("Game Over!");
+                    GameManager.isPlayingSong = false;
+                    GameManager.Status = Status.gameEnded;
+                }
+            }
+
+
+            //Game Pause
+            KeyboardState state = Keyboard.GetState();
+            if (state.IsKeyDown(Keys.Z))
+            {
+                GameManager.Status = Status.gamePaused;
+            }
+            if (state.IsKeyDown(Keys.X))
+            {
+                GameManager.Status = Status.gameIsPlayed;
             }
 
 
@@ -132,11 +151,20 @@ namespace FinalProject_GameDataStruct
 
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
 
-            _currentMap.DrawCompleteMap(_spriteBatch);
+            if (GameManager.Status != Status.gameEnded && GameManager.Status != Status.gamePaused)
+            {
+                _currentMap.DrawCompleteMap(_spriteBatch);
+            }
+            _gameManager.DrawScreen();
 
-            _player.DrawPlayer(_spriteBatch);
+            if (GameManager.Status == Status.gameIsPlayed)
+            {
+                _currentMap.DrawCompleteMap(_spriteBatch);
 
-            _missileManager.Draw(_spriteBatch);
+                _player.DrawPlayer(_spriteBatch);
+
+                _missileManager.Draw(_spriteBatch);
+            }
 
             _spriteBatch.End();
 
