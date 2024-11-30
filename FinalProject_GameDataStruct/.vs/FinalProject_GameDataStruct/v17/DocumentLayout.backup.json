@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\Game\\Final\\game-data-struct-3term\\FinalProject_GameDataStruct\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|c:\\users\\venic\\onedrive\\documents\\college\\third_term\\game\\final\\game-data-struct-3term\\finalproject_gamedatastruct\\class\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|solutionrelative:class\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|c:\\users\\venic\\onedrive\\documents\\college\\third_term\\game\\final\\game-data-struct-3term\\finalproject_gamedatastruct\\class\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|solutionrelative:class\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|c:\\users\\venic\\onedrive\\documents\\college\\third_term\\game\\final\\game-data-struct-3term\\finalproject_gamedatastruct\\class\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|solutionrelative:class\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|c:\\users\\venic\\onedrive\\documents\\college\\third_term\\game\\final\\game-data-struct-3term\\finalproject_gamedatastruct\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,71 +43,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-<<<<<<< HEAD
-=======
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\Game\\Final\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\Player.cs",
-              "RelativeDocumentMoniker": "Class\\Player.cs",
-              "ToolTip": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\Game\\Final\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\Player.cs",
-              "RelativeToolTip": "Class\\Player.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwG8AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T14:28:05.947Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "SoundManager.cs",
               "DocumentMoniker": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\Game\\Final\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\SoundManager.cs",
               "RelativeDocumentMoniker": "Class\\SoundManager.cs",
               "ToolTip": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\Game\\Final\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\SoundManager.cs",
               "RelativeToolTip": "Class\\SoundManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T13:55:15.611Z",
+              "WhenOpened": "2024-11-30T15:49:46.296Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MissileManager.cs",
-              "DocumentMoniker": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\Game\\Final\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\Maps\\MissileManager.cs",
-              "RelativeDocumentMoniker": "Class\\Maps\\MissileManager.cs",
-              "ToolTip": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\Game\\Final\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\Maps\\MissileManager.cs",
-              "RelativeToolTip": "Class\\Maps\\MissileManager.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAgwD4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\Game\\Final\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\Player.cs",
+              "RelativeDocumentMoniker": "Class\\Player.cs",
+              "ToolTip": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\Game\\Final\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\Player.cs",
+              "RelativeToolTip": "Class\\Player.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T15:31:22.064Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Missile.cs",
-              "DocumentMoniker": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\Game\\Final\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\Maps\\Missile.cs",
-              "RelativeDocumentMoniker": "Class\\Maps\\Missile.cs",
-              "ToolTip": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\Game\\Final\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\Maps\\Missile.cs",
-              "RelativeToolTip": "Class\\Maps\\Missile.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAA/wDAAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T15:24:55.523Z"
+              "WhenOpened": "2024-11-30T15:49:25.575Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
->>>>>>> 35a684729093e93c434de40aac638c6ad54d1796
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\Game\\Final\\game-data-struct-3term\\FinalProject_GameDataStruct\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\Game\\Final\\game-data-struct-3term\\FinalProject_GameDataStruct\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-<<<<<<< HEAD
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAAtAAAAAAAAAA==",
-=======
-              "ViewState": "AgIAAEoAAAAAAAAAAAAgwFwAAAAAAAAAAAAAAA==",
->>>>>>> 35a684729093e93c434de40aac638c6ad54d1796
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T22:23:33.188Z"
+              "WhenOpened": "2024-11-21T22:23:33.188Z",
+              "EditorCaption": ""
             }
           ]
         }
