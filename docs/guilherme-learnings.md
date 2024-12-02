@@ -10,6 +10,7 @@ VIDEO 1: https://www.youtube.com/watch?v=lcrgj26G5Hg&list=PLV27bZtgVIJqoeHrQq6Mt
 VIDEO 2: https://www.youtube.com/watch?v=76Mz7ClJLoE&list=PLV27bZtgVIJqoeHrQq6Mt_S1-Fvq_zzGZ&index=13&ab_channel=Oyyou
 
 I did all the textures for buttons and some for specific screens. 
+
 The most difficult part was making the buttons work.
 
 In general, I had to learn how to make buttons and how to manage the screens. 
