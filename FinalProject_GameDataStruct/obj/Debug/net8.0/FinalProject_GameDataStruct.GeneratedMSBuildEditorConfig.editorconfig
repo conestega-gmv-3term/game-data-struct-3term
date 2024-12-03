@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FinalProject_GameDataStruct
-build_property.ProjectDir = C:\Users\Venic\OneDrive\Documents\College\Third_Term\G\game-data-struct-3term\FinalProject_GameDataStruct\
+build_property.ProjectDir = C:\Assignments\3 term\Game Programming with Data Structures\Final\game-data-struct-3term\FinalProject_GameDataStruct\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

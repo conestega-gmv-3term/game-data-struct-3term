@@ -39,9 +39,9 @@ namespace FinalProject_GameDataStruct.Class.EnemyClasses
             EnemyPosition = enemyPosition;
         }
 
-        public void UpdateEnemyLocation(Vector2 playerPosition, GameTime gameTime) 
+        public void UpdateEnemyLocation(Vector2 PlayerPosition, GameTime gameTime)
         {
-            TargetPosition = playerPosition;
+            TargetPosition = PlayerPosition;
 
             // Calculate the direction vector from the enemy to the player
             Vector2 direction = TargetPosition - EnemyPosition;
@@ -53,11 +53,11 @@ namespace FinalProject_GameDataStruct.Class.EnemyClasses
                 EnemyPosition += direction * speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
             }
         }
-        public void DrawEnemy(SpriteBatch spriteBatch) 
+        public void DrawEnemy(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(EnemyImage, EnemyPosition, Color.White);
         }
-        public void UpdateHealth(int damage) 
+        public void UpdateHealth(int damage)
         {
             health -= damage;
             if (health <= 0)
@@ -65,10 +65,10 @@ namespace FinalProject_GameDataStruct.Class.EnemyClasses
                 DestroyEnemy();
             }
         }
-        public void DestroyEnemy() 
+        public void DestroyEnemy()
         {
             // For now, we'll just print a message to the console
-            Console.WriteLine("Enemy Destroyed!");
+            Console.WriteLine("Player Destroyed!");
         }
 
         public Vector2 GetPosition()

@@ -98,7 +98,6 @@ namespace FinalProject_GameDataStruct
 
             //Player Related
             _player = new Player(_playerTexture, new Vector2 (ScreenWidth/2 -32,ScreenHeight/2 - 32));
-            playerPosition = new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2);
 
             //Enemy Related
             _enemy = new EnemyBase(_enemyTexture, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), 100, 50);
@@ -129,7 +128,7 @@ namespace FinalProject_GameDataStruct
             {
                 _player.UpdatePlayerLocation(Keyboard.GetState(), gameTime);
 
-                _enemy.UpdateEnemyLocation(playerPosition, gameTime);
+                _enemy.UpdateEnemyLocation(_player.PlayerPosition, gameTime);
 
                 base.Update(gameTime);
 
