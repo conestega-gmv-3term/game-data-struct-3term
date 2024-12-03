@@ -13,6 +13,8 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Reflection;
+using System.Linq;
 
 namespace FinalProject_GameDataStruct
 {
@@ -34,8 +36,10 @@ namespace FinalProject_GameDataStruct
         private List<Rectangle> intersections;
 
         //Enemy Related
+        //private List<EnemyBase> enemies;
         Texture2D _enemyTexture;
-        EnemyBase _enemy;
+        //EnemyBase _enemy;
+        private EnemyManager enemyManager;
 
         //Screen variables
         public static int ScreenWidth = 1088;
@@ -100,7 +104,10 @@ namespace FinalProject_GameDataStruct
             _player = new Player(_playerTexture, new Vector2 (ScreenWidth/2 -32,ScreenHeight/2 - 32));
 
             //Enemy Related
-            _enemy = new EnemyBase(_enemyTexture, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), 100, 50);
+            //_enemy = new EnemyBase(_enemyTexture, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), 100, 50);
+
+            /*Vector2 spawnArea = new Vector2(GraphicsDevice.Viewport.Width, 100)*/
+            enemyManager = new EnemyManager(_enemyTexture);
 
             //Missile Related            
             _missileManager = new MissileManager(MissileTexture, ExplosionTexture);
@@ -128,14 +135,14 @@ namespace FinalProject_GameDataStruct
             {
                 _player.UpdatePlayerLocation(Keyboard.GetState(), gameTime);
 
-                _enemy.UpdateEnemyLocation(_player.PlayerPosition, gameTime);
-
-                // Check for collision
-                if (_player.destRect.Intersects(_enemy.GetEnemyBounds()))
+                //_enemy.UpdateEnemyLocation(_player.PlayerPosition, gameTime);
+                foreach (var enemy in enemyManager.enemies)
                 {
-                    // Player lost the game!
-                    Console.WriteLine("Player touched the enemy! Game Over!");
-                    GameManager.Status = Status.gameEnded; // Set game status to "Game Over"
+                    // Check for collision
+                    if (_player.destRect.Intersects(enemy.GetEnemyBounds()))
+                    {
+                        GameManager.Status = Status.gameEnded; // Set game status to "Game Over"
+                    }
                 }
 
                 base.Update(gameTime);
@@ -150,22 +157,31 @@ namespace FinalProject_GameDataStruct
                     GameManager.isPlayingSong = false;
                     GameManager.Status = Status.gameEnded;
                 }
+
+                foreach (var enemy in enemyManager.enemies) 
+                { 
+                    if (_missileManager.CheckCollision(enemy.GetEnemyBounds()) && enemy.IsAlive)
+                        {
+                            // Missile hits the enemy
+                            enemy.IsAlive = false; // Enemy dies
+                        }
+                }
+
+                //Game Pause
+                KeyboardState state = Keyboard.GetState();
+                if (state.IsKeyDown(Keys.Z))
+                {
+                    GameManager.Status = Status.gamePaused;
+                }
+                if (state.IsKeyDown(Keys.X))
+                {
+                    GameManager.Status = Status.gameIsPlayed;
+                }
+
+                base.Update(gameTime);
+
+                enemyManager.Update(gameTime, _player.PlayerPosition);
             }
-
-
-            //Game Pause
-            KeyboardState state = Keyboard.GetState();
-            if (state.IsKeyDown(Keys.Z))
-            {
-                GameManager.Status = Status.gamePaused;
-            }
-            if (state.IsKeyDown(Keys.X))
-            {
-                GameManager.Status = Status.gameIsPlayed;
-            }
-
-
-            base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
@@ -185,8 +201,8 @@ namespace FinalProject_GameDataStruct
                 _currentMap.DrawCompleteMap(_spriteBatch);
 
                 _player.DrawPlayer(_spriteBatch);
-
-                _enemy.DrawEnemy(_spriteBatch);
+                
+                enemyManager.Draw(_spriteBatch);
 
                 _missileManager.Draw(_spriteBatch);
             }
