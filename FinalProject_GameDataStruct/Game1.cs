@@ -130,6 +130,14 @@ namespace FinalProject_GameDataStruct
 
                 _enemy.UpdateEnemyLocation(_player.PlayerPosition, gameTime);
 
+                // Check for collision
+                if (_player.destRect.Intersects(_enemy.GetEnemyBounds()))
+                {
+                    // Player lost the game!
+                    Console.WriteLine("Player touched the enemy! Game Over!");
+                    GameManager.Status = Status.gameEnded; // Set game status to "Game Over"
+                }
+
                 base.Update(gameTime);
 
                 //// Update missiles

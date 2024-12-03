@@ -65,6 +65,10 @@ namespace FinalProject_GameDataStruct.Class.EnemyClasses
                 DestroyEnemy();
             }
         }
+        public Rectangle GetEnemyBounds()
+        {
+            return new Rectangle((int)EnemyPosition.X, (int)EnemyPosition.Y, EnemyImage.Width, EnemyImage.Height);
+        }
         public void DestroyEnemy()
         {
             // For now, we'll just print a message to the console
