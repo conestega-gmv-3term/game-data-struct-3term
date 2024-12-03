@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\guilh\\OneDrive\\Documents\\Term_3\\Game Programming with Data Structures\\Game Project - 30-11\\game-data-struct-3term\\FinalProject_GameDataStruct\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|c:\\users\\guilh\\onedrive\\documents\\term_3\\game programming with data structures\\game project - 30-11\\game-data-struct-3term\\finalproject_gamedatastruct\\class\\maps\\missile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|solutionrelative:class\\maps\\missile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|c:\\users\\guilh\\onedrive\\documents\\term_3\\game programming with data structures\\game project - 30-11\\game-data-struct-3term\\finalproject_gamedatastruct\\class\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|solutionrelative:class\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|c:\\users\\guilh\\onedrive\\documents\\term_3\\game programming with data structures\\game project - 30-11\\game-data-struct-3term\\finalproject_gamedatastruct\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,18 +13,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|c:\\users\\guilh\\onedrive\\documents\\term_3\\game programming with data structures\\game project - 30-11\\game-data-struct-3term\\finalproject_gamedatastruct\\class\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|solutionrelative:class\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|c:\\users\\guilh\\onedrive\\documents\\term_3\\game programming with data structures\\game project - 30-11\\game-data-struct-3term\\finalproject_gamedatastruct\\class\\gameui\\gameui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|solutionrelative:class\\gameui\\gameui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|c:\\users\\guilh\\onedrive\\documents\\term_3\\game programming with data structures\\game project - 30-11\\game-data-struct-3term\\finalproject_gamedatastruct\\class\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|solutionrelative:class\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|c:\\users\\guilh\\onedrive\\documents\\term_3\\game programming with data structures\\game project - 30-11\\game-data-struct-3term\\finalproject_gamedatastruct\\class\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|solutionrelative:class\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,63 +27,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Missile.cs",
-              "DocumentMoniker": "C:\\Users\\guilh\\OneDrive\\Documents\\Term_3\\Game Programming with Data Structures\\Game Project - 30-11\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\Maps\\Missile.cs",
-              "RelativeDocumentMoniker": "Class\\Maps\\Missile.cs",
-              "ToolTip": "C:\\Users\\guilh\\OneDrive\\Documents\\Term_3\\Game Programming with Data Structures\\Game Project - 30-11\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\Maps\\Missile.cs",
-              "RelativeToolTip": "Class\\Maps\\Missile.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAD4vzIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T16:23:35.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameUI.cs",
-              "DocumentMoniker": "C:\\Users\\guilh\\OneDrive\\Documents\\Term_3\\Game Programming with Data Structures\\Game Project - 30-11\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\GameUI\\GameUI.cs",
-              "RelativeDocumentMoniker": "Class\\GameUI\\GameUI.cs",
-              "ToolTip": "C:\\Users\\guilh\\OneDrive\\Documents\\Term_3\\Game Programming with Data Structures\\Game Project - 30-11\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\GameUI\\GameUI.cs",
-              "RelativeToolTip": "Class\\GameUI\\GameUI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T16:19:16.156Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\Users\\guilh\\OneDrive\\Documents\\Term_3\\Game Programming with Data Structures\\Game Project - 30-11\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\GameManager.cs",
-              "RelativeDocumentMoniker": "Class\\GameManager.cs",
-              "ToolTip": "C:\\Users\\guilh\\OneDrive\\Documents\\Term_3\\Game Programming with Data Structures\\Game Project - 30-11\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\GameManager.cs",
-              "RelativeToolTip": "Class\\GameManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T16:20:39.825Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "SoundManager.cs",
               "DocumentMoniker": "C:\\Users\\guilh\\OneDrive\\Documents\\Term_3\\Game Programming with Data Structures\\Game Project - 30-11\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\SoundManager.cs",
               "RelativeDocumentMoniker": "Class\\SoundManager.cs",
               "ToolTip": "C:\\Users\\guilh\\OneDrive\\Documents\\Term_3\\Game Programming with Data Structures\\Game Project - 30-11\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\SoundManager.cs",
               "RelativeToolTip": "Class\\SoundManager.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwBYAAABMAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T15:49:46.296Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\guilh\\OneDrive\\Documents\\Term_3\\Game Programming with Data Structures\\Game Project - 30-11\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\Player.cs",
-              "RelativeDocumentMoniker": "Class\\Player.cs",
-              "ToolTip": "C:\\Users\\guilh\\OneDrive\\Documents\\Term_3\\Game Programming with Data Structures\\Game Project - 30-11\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\Player.cs",
-              "RelativeToolTip": "Class\\Player.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T15:49:25.575Z"
+              "WhenOpened": "2024-12-03T01:29:18.873Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -105,9 +45,23 @@
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\guilh\\OneDrive\\Documents\\Term_3\\Game Programming with Data Structures\\Game Project - 30-11\\game-data-struct-3term\\FinalProject_GameDataStruct\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAkwI0AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAkwHYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T22:23:33.188Z"
+              "WhenOpened": "2024-12-03T01:24:12.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\guilh\\OneDrive\\Documents\\Term_3\\Game Programming with Data Structures\\Game Project - 30-11\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\GameManager.cs",
+              "RelativeDocumentMoniker": "Class\\GameManager.cs",
+              "ToolTip": "C:\\Users\\guilh\\OneDrive\\Documents\\Term_3\\Game Programming with Data Structures\\Game Project - 30-11\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\GameManager.cs",
+              "RelativeToolTip": "Class\\GameManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T01:22:58.916Z",
+              "EditorCaption": ""
             }
           ]
         }

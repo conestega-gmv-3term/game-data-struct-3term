@@ -1,11 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace FinalProject_GameDataStruct.Class.GameUI.Screens
 {
     internal class FinalScreen : UIScreen
@@ -17,8 +12,10 @@ namespace FinalProject_GameDataStruct.Class.GameUI.Screens
 
         public override void Draw2(SpriteBatch spriteBatch, ContentManager gameManager)
         {
-            string message = "End Game, Please click on button ESC";
+            Texture2D background = gameManager.Load<Texture2D>("Black Rectangle");
+            string message = $"End Game, Your score was {GameManager.score}. Please enter ESC to finish";
             var font = gameManager.Load<SpriteFont>("timerFont");
+            spriteBatch.Draw(background, new Microsoft.Xna.Framework.Rectangle(0, 0, 1088, 1152), Microsoft.Xna.Framework.Color.White);
             spriteBatch.DrawString(font, message, new Microsoft.Xna.Framework.Vector2(1088 / 2 - font.MeasureString(message).X / 2, 1152 / 2 - font.MeasureString(message).Y / 2), Microsoft.Xna.Framework.Color.White);
         }
     }

@@ -32,6 +32,18 @@
 /processorParam:TextureFormat=Color
 /build:../Class/GameUI/Screens/Buttons/Images/Rectangle.png;Rectangle.png
 
+#begin ../Images/Black Rectangle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Images/Black Rectangle.png;Black Rectangle.png
+
 #begin ../Images/Character_Chart.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -68,6 +80,18 @@
 /processorParam:TextureFormat=Color
 /build:../Images/explosion.png;explosion.png
 
+#begin ../Images/Keyboard-removebg-preview.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Images/Keyboard-removebg-preview.png;Keyboard-removebg-preview.png
+
 #begin ../Images/Tilemap_Collision.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -103,6 +127,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../Images/Tilemap.png;Tilemap.png
+
+#begin ../Images/Z_-_Letter-removebg-preview.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Images/Z_-_Letter-removebg-preview.png;Z_-_Letter-removebg-preview.png
 
 #begin ../Sounds/credits-music.mp3
 /importer:Mp3Importer

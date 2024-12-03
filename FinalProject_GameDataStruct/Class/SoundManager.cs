@@ -46,6 +46,7 @@ namespace FinalProject_GameDataStruct.Class
         public static void PlayExplosionSound()
         {
             explosion?.Play();
+            GameManager.score++;
         }
 
         /// <summary>
