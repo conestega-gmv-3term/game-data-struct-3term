@@ -20,22 +20,19 @@ namespace FinalProject_GameDataStruct
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private GameManager _gameManager;
+
         //Map Related
         Dictionary<string ,GameMap> _maps;
         GameMap _currentMap;
         Texture2D _mapTexture;
-        private Dictionary<Vector2, int> collisions;
 
         //Player Related
         Texture2D _playerTexture;
         Player _player;
-        private List<Rectangle> intersections;
 
         //Screen variables
         public static int ScreenWidth = 1088;
         public static int ScreenHeight = 1152;
-
-        private Texture2D rectangleTexture;
 
         //Blocks
         private MissileManager _missileManager;
@@ -67,10 +64,11 @@ namespace FinalProject_GameDataStruct
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            GameManager.gameUI = new GameUI(_spriteBatch, Content);
-            _gameManager = new GameManager();
-            //Textures
+            GameManager.gameUI = new GameUI(_spriteBatch, Content); //Instance of GameUI to draw the screens
+            _gameManager = new GameManager(); //instance of GameManager
 
+
+            //Textures
             //Map Related
             _mapTexture = Content.Load<Texture2D>("Tilemap");
             //Player Related
@@ -101,8 +99,6 @@ namespace FinalProject_GameDataStruct
                 endgame: Content.Load<Song>("credits-music"),
                 playerMoveSound: Content.Load<SoundEffect>("tank-track-rattelingWAV")
             );
-
-            SoundManager.PlayGamePlaySong();
         }
 
         protected override void Update(GameTime gameTime)
@@ -110,10 +106,11 @@ namespace FinalProject_GameDataStruct
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            _gameManager.Update();
+            _gameManager.Update(); //Update the game in general
+            _gameManager.updateTime(gameTime); //Update the Game
 
 
-            if (GameManager.Status == Status.gameIsPlayed)
+            if (GameManager.Status == Status.gameIsPlayed) //To initialize the Game
             {
                 _player.UpdatePlayerLocation(Keyboard.GetState(), gameTime);
 
@@ -127,20 +124,34 @@ namespace FinalProject_GameDataStruct
                     GameManager.isPlayingSong = false;
                     GameManager.Status = Status.gameEnded;
                 }
+                if (GameManager.Status == Status.gameEnded) 
+                {
+                    GameManager.isPlayingSong = false;
+                }
             }
+            
 
 
-            //Game Pause
+
             KeyboardState state = Keyboard.GetState();
+
             if (state.IsKeyDown(Keys.Z))
             {
-                GameManager.Status = Status.gamePaused;
-            }
-            if (state.IsKeyDown(Keys.X))
-            {
-                GameManager.Status = Status.gameIsPlayed;
+                if (GameManager.previousStatus == Status.gameStarted && GameManager.Status== Status.gameControls) //Return to the MenuScreen
+                {
+                    GameManager.Status = Status.gameStarted;
+                }
+                if (GameManager.Status == Status.gameIsPlayed || GameManager.previousStatus==Status.gamePaused) //Return to the PauseScreen
+                {
+                    GameManager.Status = Status.gamePaused;
+                }
             }
 
+            if (GameManager.Status == Status.exitGame) //Exit the Game
+            { 
+                Exit();
+            }
+            
 
             base.Update(gameTime);
         }
@@ -151,12 +162,13 @@ namespace FinalProject_GameDataStruct
 
             _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
 
-            if (GameManager.Status != Status.gameEnded && GameManager.Status != Status.gamePaused)
+            //Display the map as background
+            if (GameManager.Status == Status.gameStarted || GameManager.Status == Status.gamePaused || GameManager.Status == Status.gameControls)
             {
                 _currentMap.DrawCompleteMap(_spriteBatch);
             }
-            _gameManager.DrawScreen();
 
+            //Display the Game
             if (GameManager.Status == Status.gameIsPlayed)
             {
                 _currentMap.DrawCompleteMap(_spriteBatch);
@@ -166,56 +178,11 @@ namespace FinalProject_GameDataStruct
                 _missileManager.Draw(_spriteBatch);
             }
 
-            _spriteBatch.End();
+            //Display the Screens
+            _gameManager.DrawScreen();
 
+            _spriteBatch.End();
             base.Draw(gameTime);
         }
-
-
-        //This method we can use to draw rectangles (good for debugging)
-        public void DrawRectHollow(SpriteBatch spriteBatch, Rectangle rect, int thickness)
-        {
-            spriteBatch.Draw(
-                rectangleTexture,
-                new Rectangle(
-                    rect.X,
-                    rect.Y,
-                    rect.Width,
-                    thickness
-                ),
-                Color.White
-            );
-            spriteBatch.Draw(
-                rectangleTexture,
-                new Rectangle(
-                    rect.X,
-                    rect.Bottom - thickness,
-                    rect.Width,
-                    thickness
-                ),
-                Color.White
-            );
-            spriteBatch.Draw(
-                rectangleTexture,
-                new Rectangle(
-                    rect.X,
-                    rect.Y,
-                    thickness,
-                    rect.Height
-                ),
-                Color.White
-            );
-            spriteBatch.Draw(
-                rectangleTexture,
-                new Rectangle(
-                    rect.Right - thickness,
-                    rect.Y,
-                    thickness,
-                    rect.Height
-                ),
-                Color.White
-            );
-        }
-
     }
 }

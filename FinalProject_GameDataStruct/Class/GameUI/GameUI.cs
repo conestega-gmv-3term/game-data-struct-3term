@@ -6,9 +6,10 @@ namespace FinalProject_GameDataStruct.Class.GameUI
 {
     internal class GameUI
     {
+        //What is needed to design the screens Correctly
         static SpriteBatch _spriteBatch;
         static ContentManager _contentManager;
-        bool SecondDraw = false;
+        static public bool SecondDraw = false;
 
         public GameUI(SpriteBatch spriteBatch, ContentManager Content)
         {
