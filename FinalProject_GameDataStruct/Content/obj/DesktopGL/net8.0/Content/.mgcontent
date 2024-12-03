@@ -4,20 +4,20 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/G/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Class/GameUI/Screens/Buttons/Font/timerFont.spritefont</File>
-    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/G/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Class/GameUI/Screens/Buttons/Images/Rectangle.png</File>
-    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/G/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Images/Character_Chart.png</File>
-    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/G/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Images/Enemy_Chart.png</File>
-    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/G/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Images/explosion.png</File>
-    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/G/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Images/Tilemap_Collision.png</File>
-    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/G/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Images/Tilemap_Tiles.png</File>
-    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/G/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Images/Tilemap.png</File>
-    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/G/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Sounds/credits-music.mp3</File>
-    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/G/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Sounds/explosion-sound-effect.mp3</File>
-    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/G/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Sounds/explosion-sound-effectWAV.wav</File>
-    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/G/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Sounds/gameplay-music.mp3</File>
-    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/G/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Sounds/tank-track-ratteling.mp3</File>
-    <File>C:/Users/Venic/OneDrive/Documents/College/Third_Term/G/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Sounds/tank-track-rattelingWAV.wav</File>
+    <File>C:/Assignments/3 term/Game Programming with Data Structures/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Class/GameUI/Screens/Buttons/Font/timerFont.spritefont</File>
+    <File>C:/Assignments/3 term/Game Programming with Data Structures/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Class/GameUI/Screens/Buttons/Images/Rectangle.png</File>
+    <File>C:/Assignments/3 term/Game Programming with Data Structures/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Images/Character_Chart.png</File>
+    <File>C:/Assignments/3 term/Game Programming with Data Structures/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Images/Enemy_Chart.png</File>
+    <File>C:/Assignments/3 term/Game Programming with Data Structures/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Images/explosion.png</File>
+    <File>C:/Assignments/3 term/Game Programming with Data Structures/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Images/Tilemap_Collision.png</File>
+    <File>C:/Assignments/3 term/Game Programming with Data Structures/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Images/Tilemap_Tiles.png</File>
+    <File>C:/Assignments/3 term/Game Programming with Data Structures/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Images/Tilemap.png</File>
+    <File>C:/Assignments/3 term/Game Programming with Data Structures/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Sounds/credits-music.mp3</File>
+    <File>C:/Assignments/3 term/Game Programming with Data Structures/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Sounds/explosion-sound-effect.mp3</File>
+    <File>C:/Assignments/3 term/Game Programming with Data Structures/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Sounds/explosion-sound-effectWAV.wav</File>
+    <File>C:/Assignments/3 term/Game Programming with Data Structures/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Sounds/gameplay-music.mp3</File>
+    <File>C:/Assignments/3 term/Game Programming with Data Structures/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Sounds/tank-track-ratteling.mp3</File>
+    <File>C:/Assignments/3 term/Game Programming with Data Structures/Final/game-data-struct-3term/FinalProject_GameDataStruct/Content/../Sounds/tank-track-rattelingWAV.wav</File>
   </SourceFiles>
   <DestFiles>
     <File>timerFont.spritefont</File>
