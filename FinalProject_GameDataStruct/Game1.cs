@@ -144,8 +144,11 @@ namespace FinalProject_GameDataStruct
 
                 base.Update(gameTime);
 
-                //// Update missiles
+                // Update missiles
                 _missileManager.Update(gameTime);
+
+                // Update enemy
+                enemyManager.Update(gameTime, _player.PlayerPosition);
 
                 //// Check collisions
                 if (_missileManager.CheckCollision(_player.destRect))
@@ -192,11 +195,11 @@ namespace FinalProject_GameDataStruct
             }
             
 
-                base.Update(gameTime);
+            base.Update(gameTime);
 
-                enemyManager.Update(gameTime, _player.PlayerPosition);
-            }
+            
         }
+        
 
         protected override void Draw(GameTime gameTime)
         {

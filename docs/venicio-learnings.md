@@ -78,3 +78,8 @@ For that I created a class SoundManager, this is going to be the class responsib
 
 I decided to make it static, so, any object we decide needs to have a sound can call a method from this class without instantiating it.
 
+## 03/Dec./2024
+
+Updated the documentation based on our latest status of the project.
+
+That includes the README, the comments for the classes I designed, and the presentation for our project.
