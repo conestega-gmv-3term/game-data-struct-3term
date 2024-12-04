@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\game-data-struct-3term\\FinalProject_GameDataStruct\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|c:\\users\\venic\\onedrive\\documents\\college\\third_term\\game-data-struct-3term\\finalproject_gamedatastruct\\class\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|solutionrelative:class\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|c:\\users\\venic\\onedrive\\documents\\college\\third_term\\game-data-struct-3term\\finalproject_gamedatastruct\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27E63E0D-DDB2-4C38-B1E3-E95784386BC2}|FinalProject_GameDataStruct.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -35,12 +39,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\GameManager.cs",
+              "RelativeDocumentMoniker": "Class\\GameManager.cs",
+              "ToolTip": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\game-data-struct-3term\\FinalProject_GameDataStruct\\Class\\GameManager.cs",
+              "RelativeToolTip": "Class\\GameManager.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwD4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T02:40:59.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\game-data-struct-3term\\FinalProject_GameDataStruct\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\Venic\\OneDrive\\Documents\\College\\Third_Term\\game-data-struct-3term\\FinalProject_GameDataStruct\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJIAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAwJIAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T23:03:57.494Z",
               "EditorCaption": ""

@@ -60,6 +60,7 @@ namespace FinalProject_GameDataStruct.Class
             {
                 if (!isPlayingSong)
                 {
+                    SoundManager.StopAllSounds();
                     SoundManager.PlayEndGameSong();
                     isPlayingSong = true;
                 }
